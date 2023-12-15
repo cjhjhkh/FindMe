@@ -1,0 +1,398 @@
+.pre-btn {
+  position: absolute;
+  z-index: 5;
+  left: 14px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/preBtN3.png);
+}
+.comment,
+.qAndA {
+  background-image: url(../images/communication.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.comment {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.comment-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1194px;
+  height: 595px;
+}
+.comment .cont-container {
+  position: relative;
+  width: 558px;
+  height: 470px;
+  background-image: url(../images/comment-bgi.png);
+  padding: 33px;
+  border-radius: 8px;
+}
+.user {
+  display: flex;
+  height: 48px;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 19px;
+  background-image: url(../images/avatar5.jpg);
+}
+.cont {
+  width: 482px;
+  font-size: 16px;
+  color: #5e5e5e;
+  line-height: 30px;
+  margin-top: 30px;
+}
+.operate {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88%;
+  height: 32px;
+}
+.like {
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/com-like.png);
+  margin-right: 36px;
+}
+.like-active {
+  background-image: url(../images/isLike.png);
+}
+.store {
+  width: 29px;
+  height: 29px;
+  background-image: url(../images/com-store.png);
+  margin-right: 36px;
+}
+.store-active {
+  background-image: url(../images/is-store.png);
+}
+.comment-input {
+  outline: none;
+  border: none;
+  background: none;
+  width: 361px;
+  height: 38px;
+  background-image: url(../images/input-bgi.png);
+  background-size: 106% 200%;
+  background-repeat: no-repeat;
+  background-position: -11px -19px;
+  color: #666666;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.comment-input::placeholder {
+  color: #666666;
+  font-size: 18px;
+}
+.name {
+  width: 64px;
+  height: 25px;
+  line-height: 25px;
+  color: #000;
+  font-size: 18px;
+}
+.data {
+  width: 74px;
+  height: 22px;
+  line-height: 22px;
+  color: #666666;
+  font-size: 14px;
+}
+.chat-area {
+  position: relative;
+  margin-right: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 416px;
+  position: absolute;
+  right: 45px;
+  height: 100vh;
+  width: 32.8vw;
+}
+.chat-area .tit {
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 205px;
+  height: 39px;
+  line-height: 39px;
+  font-size: 36px;
+}
+.chat-area .star-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -42%);
+  width: 337px;
+  height: 363px;
+  background-image: url(../images/star-box.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.chat-area .card {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 395px;
+  height: 214px;
+  background-image: url(../images/card-bgi\ \(1\).png);
+  background-size: contain;
+  padding: 30px;
+  border-radius: 8px;
+}
+.chat-area .card .close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/close-icon.png);
+}
+.chat-area .card .like {
+  margin-right: 12px;
+}
+.chat-area .card .active-like {
+  background-image: url(../images/isLike.png);
+}
+.chat-area .card .operate {
+  width: 84%;
+}
+.chat-area .card .msg {
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/msg-bgi.png);
+  margin-left: 12px;
+}
+.chat-area .card .comment-input {
+  width: 246px;
+}
+.chat-area .show-card {
+  display: block;
+}
+.chat-area .comment-area {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32.8vw;
+  height: 100%;
+  background-image: url(../images/spread-comment.png);
+  background-size: 100% 100%;
+  padding: 0 30px;
+  overflow-x: hidden;
+  overflow: scroll;
+}
+.chat-area .comment-area::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+.chat-area .spread-card {
+  position: relative;
+  width: 100%;
+  padding: 22px 0;
+  border-bottom: 2px solid #9c9c9c;
+}
+.chat-area .spread-card .user {
+  position: relative;
+}
+.chat-area .spread-card .cont {
+  width: 482px;
+  /* height: 236px; */
+  font-size: 16px;
+  color: #5e5e5e;
+  line-height: 36px;
+  margin: 0px 0 0 66px;
+}
+.chat-area .spread-card .spread-like {
+  display: flex;
+  margin-right: 18px;
+}
+.chat-area .spread-card .spread-operate {
+  position: absolute;
+  right: 0px;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+.chat-area .spread-card .like-item {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/spread-like.png);
+  margin-right: 8px;
+}
+.chat-area .spread-card .active-like {
+  background-image: url(../images/isLike.png);
+}
+.chat-area .spread-card .count,
+.chat-area .spread-card .reply {
+  font-size: 14px;
+  color: #666666;
+}
+.chat-area .spread-card .reply-item {
+  width: 79%;
+  z-index: 88;
+  margin-left: 64px;
+  margin-top: 8px;
+}
+.chat-area .spread-card .reply-item .avatar {
+  width: 36px;
+  height: 36px;
+}
+.chat-area .spread-card .reply-item .cont {
+  /* height: 236px; */
+  font-size: 14px;
+  color: #5e5e5e;
+  line-height: 36px;
+  margin: 0px 0 0 54px;
+}
+.chat-area .spread-card .reply-item .spread-like {
+  display: flex;
+  margin-right: 18px;
+}
+.chat-area .spread-card .reply-item .spread-operate {
+  position: absolute;
+  right: 0px;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+.chat-area .spread-card .reply-item .like-item {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/spread-like.png);
+  margin-right: 8px;
+}
+.chat-area .spread-card .reply-item .active-like {
+  background-image: url(../images/isLike.png);
+}
+.chat-area .spread-card .reply-item .count,
+.chat-area .spread-card .reply-item .reply {
+  font-size: 14px;
+  color: #666666;
+}
+.chat-area .spread-card .reply-wrap {
+  height: 92px;
+  width: 371px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.chat-area .spread-card .spread-text-active {
+  height: auto;
+}
+.chat-area .spread-card .spread-text {
+  height: 16px;
+  line-height: 16px;
+  font-size: 14px;
+  color: #666666;
+  margin-left: 62px;
+}
+.chat-area .spread-card .spread-text:hover {
+  color: #000;
+}
+.chat-area .spread {
+  display: block;
+}
+.spread-btn {
+  position: absolute;
+  top: 75px;
+  right: -77px;
+  width: 110px;
+  height: 43px;
+  background-image: linear-gradient(to top, #f0f0f0, rgba(204, 204, 204, 0));
+  font-size: 16px;
+  color: #000;
+  line-height: 43px;
+  text-align: center;
+}
+.qAndA {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.qAndA-wrap {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.qAndA-wrap .cont-container {
+  width: 608px;
+  height: 100%;
+  background-image: url(../images/comment-bgi.png);
+  background-size: 100% 100%;
+  padding: 62px 28px 0;
+}
+.qAndA-wrap .chat-area {
+  position: absolute;
+  right: 45px;
+  height: 100vh;
+  width: 32.8vw;
+}
+.qAndA-wrap .content,
+.qAndA-wrap .duty {
+  margin-top: 30px;
+}
+.qAndA-wrap .user-desc,
+.qAndA-wrap .cont-desc,
+.qAndA-wrap .duty-desc {
+  width: 482px;
+  font-size: 16px;
+  color: #5e5e5e;
+  line-height: 30px;
+}
+.qAndA-wrap .cont-desc,
+.qAndA-wrap .duty-desc {
+  margin-top: 10px;
+  width: auto;
+}
+.qAndA-wrap .content .tit,
+.qAndA-wrap .duty .tit {
+  font-size: 20px;
+  color: #4f4f4f;
+}
+.qAndA-wrap .cont-container .user {
+  height: 74px;
+}
+.qAndA-wrap .cont-container .cont {
+  height: auto;
+  width: auto;
+}
+.qAndA-wrap .cont-container .operate {
+  position: static;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  margin-top: 54px;
+}
+.qAndA-wrap .cont-container .operate .like,
+.qAndA-wrap .cont-container .operate .store {
+  margin-right: 0px;
+}
+.qAndA-wrap .cont-container .operate .comment-input {
+  width: 404px;
+}

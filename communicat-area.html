@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>communicat-area</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/communicat-area.css">
+
+    <link rel="stylesheet" href="./css/self-evaluation.css">
+
+    <!-- 绘本 -->
+    <script src="./javascript/book.js"></script>
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+    <script src="./javascript/communicat-area.js"></script>
+
+    <!-- 匹配 -->
+    <link rel="stylesheet" href="./css/bridge-plate.css">
+    <script src="./javascript/bridge-plate.js"></script>
+
+</head>
+
+<body>
+    <div class="communication-container">
+
+        <!-- 星星交流区 -->
+        <div class="communicat-area">
+            <div class="communicat-area-wrap">
+                <div class="plate-tit">交流区</div>
+                <div class="comItem-wrap"></div>
+                <div class="add-communi"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- 匹配交友 -->
+        <div class="bridge-plate" id="match">
+
+            <a href="./index.html#intro">
+                <div class="pre-btn"></div>
+            </a>
+
+
+
+
+            <!-- 绘本 -->
+            <div class="self-evaluation">
+                <div class="self-evaluation-wrap">
+                    <div class="main-cont">
+                        <ul class="book">
+                            <!-- <div class="tip tip1">
+                                <div class="tip-main">
+                                    <div class="tip-text">
+                                        <div class="text-cont">我们一起玩个游戏吧，试着用文字、图画或者贴纸的方式想象“我”的样子吧！</div>
+                                        <div class="continue">点击任意位置继续</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tip tip2">
+                                <div class="tip-main">
+                                    <div class="tip-text">
+                                        <div class="text-cont">如果是职业的话？你觉得我擅长做什么工作呢？</div>
+                                        <div class="continue">点击任意位置继续</div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <li class="page page1 front"></li>
+                            <li class="page page2 back">
+
+                                <div class="avatar">
+                                    <img src="./images/avatar.jpg">
+                                    <div class="add-change">
+                                        <div class="add"></div>
+                                        <div class="text">点击修改头像</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="self-intro">你好呀，我是<span class="input user-name">Winnie</span>。我的职业是<span
+                                        class="input user-job">前端工程师</span>噢！我的生日是<span
+                                        class="input year">2005</span>年<span class="input month">6</span>月<span
+                                        class="input data">6</span>日。我来自<span
+                                        class="input area">广东</span>。很高兴认识你，我们交个朋友吧!</div>
+                            </li>
+                            <li class="page page3 front">
+                                <div class="adv show1">
+                                    <div class="adv-cont">
+                                        <div class="cont">聪明</div>
+                                    </div>
+                                    <div class="adv-cont">
+                                        <div class="cont">勇敢</div>
+                                    </div>
+                                    <div class="adv-cont">
+                                        <div class="cont">有力气</div>
+                                    </div>
+                                    <div class="adv-cont">
+                                        <div class="cont">有爱心</div>
+                                    </div>
+                                    <div class="desc-text">我有很多优点，这些都是我的优势！</div>
+                                </div>
+                                <div class="disadv">
+                                    <div class="disadv-cont">
+                                        <div class="cont">粗心</div>
+                                    </div>
+                                    <div class="disadv-cont">
+                                        <div class="cont">专注力不佳</div>
+                                    </div>
+                                    <div class="disadv-cont">
+                                        <div class="cont">不果断</div>
+                                    </div>
+                                    <div class="disadv-cont">
+                                        <div class="cont">怕狗</div>
+                                    </div>
+                                    <div class="desc-text">当然我也有缺点，这是我的劣势，希望我们能好好相处！</div>
+                                </div>
+                                <div class="change-box">
+                                    <div class="text">Advantage</div>
+                                    <div class="change-btn">
+                                        <div class="slider"></div>
+                                    </div>
+                                    <div class="text">Disadvantage</div>
+                                </div>
+                            </li>
+                            <li class="page page4 back">
+                                <img src="" class="nowMe">
+                                <div class="tit">现在的我是这样的...</div>
+
+                            </li>
+                            <li class="page page5 front">
+                                <img src="" class="futureMe">
+                                <div class="tit">理想的我是这样的...</div>
+                            </li>
+                            <li class="page page6 back">
+                                <div class="tit">现在的我的职业是这样的...</div>
+
+                                <div class="edit-contain">
+                                    <div class="job-box">
+                                        <div class="sticker-area">
+                                            <!-- <div class="tipTit">职业头像</div> -->
+                                            <!-- <div class="tipText">（选择贴纸拖动到此处）</div> -->
+                                        </div>
+                                        <div class="futureJob"></div>
+                                        <textarea class="job-desc" cols="30" rows="10"
+                                            placeholder="描述一下你对未来职业的想法吧"></textarea>
+                                    </div>
+                                    <div class="job-box">
+                                        <div class="sticker-area">
+                                            <!-- <div class="tipTit">职业头像</div> -->
+                                            <!-- <div class="tipText">（选择贴纸拖动到此处）</div> -->
+                                        </div>
+                                        <div class="futureJob"></div>
+                                        <textarea class="job-desc" cols="30" rows="10"
+                                            placeholder="描述一下你对未来职业的想法吧"></textarea>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="page page7 front">
+                                <div class="tit">理想的我的职业是这样的...</div>
+                                <div class="edit-contain">
+                                    <div class="job-box">
+                                        <div class="sticker-area">
+                                            <!-- <div class="tipTit">职业头像</div> -->
+                                            <!-- <div class="tipText">（选择贴纸拖动到此处）</div> -->
+                                        </div>
+                                        <div class="futureJob"></div>
+                                        <textarea class="job-desc" cols="30" rows="10"
+                                            placeholder="描述一下你对未来职业的想法吧"></textarea>
+                                    </div>
+                                    <div class="job-box">
+                                        <div class="sticker-area">
+                                            <!-- <div class="tipTit">职业头像</div> -->
+                                            <!-- <div class="tipText">（选择贴纸拖动到此处）</div> -->
+                                        </div>
+                                        <div class="futureJob"></div>
+                                        <textarea class="job-desc" cols="30" rows="10"
+                                            placeholder="描述一下你对未来职业的想法吧"></textarea>
+                                    </div>
+                                </div>
+                                <!-- <div class="except-wrap">
+                                    <div class="except">
+                                        <div class="text">接受</div>
+                                        <div class="tag-mark">√</div>
+                                    </div>
+                                </div>
+                                <div class="reject-wrap">
+                                    <div class="reject">
+                                        <div class="text">拒绝</div>
+                                        <div class="tag-mark">×</div>
+                                    </div>
+                                </div> -->
+                            </li>
+                            <li class="page page8 back">
+
+                                <div class="sum"></div>
+                                <div class="sum"></div>
+                                <div class="sum"></div>
+                            </li>
+                            <div class="except-wrap">
+                                <div class="except">
+                                    <div class="text">发送</div>
+                                    <div class="tag-mark">√</div>
+                                </div>
+                            </div>
+                            <div class="reject-wrap">
+                                <div class="reject">
+                                    <div class="text">取消</div>
+                                    <div class="tag-mark">×</div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- 选择匹配模式 -->
+            <div class="sel-mod">
+                <div class="sel-wrap">
+                    <p class="sel-tip">请选择您的匹配模式</p>
+                    <div class="sel-box">
+                        <div class="random-btn">随机电波</div>
+                        <div class="custom-btn">自定义电波</div>
+                    </div>
+                    <div class="custom-contain">
+                        <div class="cuntom-item">
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                            <div class="mbti-item">
+                                <div class="mbtiName"></div>
+                                <div class="match"></div>
+                            </div>
+                        </div>
+                        <div class="enter">确定</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 星球板块 -->
+            <div class="stars">
+                <div class="green-star star">
+                    <div class="intro">我是enfp</div>
+                </div>
+                <div class="yellow-star star">
+                    <div class="intro">我是enfp</div>
+                </div>
+                <div class="purple-star star">
+                    <div class="intro">我是enfp</div>
+                </div>
+                <div class="blue-star star">
+                    <div class="intro">我是enfp</div>
+                </div>
+                <div class="gg-star star">
+                    <div class="intro">我是enfp</div>
+                </div>
+                <div class="updata">换一批</div>
+                <div class="close-star">关闭电波</div>
+            </div>
+
+            <!-- 显示个人信息 -->
+            <div class="user-msg">
+                <div class="user">
+                    <div class="head"></div>
+                    <div class="means">
+                        <p class="nick-name">Winnie</p>
+                        <p class="motto">一只幸运的羊~</p>
+                    </div>
+                </div>
+                <div class="correlation">
+                    <div class="left">
+                        <div class="relation">
+                            <div class="interest">
+                                <div class="tit">兴趣爱好</div>
+                                <div class="interest-cont">
+                                    <div class="icon"></div>
+                                    <div class="icon-name">乒乓球</div>
+                                </div>
+                            </div>
+                            <div class="job">
+                                <div class="tit">我的职业</div>
+                                <div class="job-cont">
+                                    <div class="icon"></div>
+                                    <div class="icon-name">学生</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mbti">ENFP</div>
+                    </div>
+                    <div class="right">
+                        <div class="tit">我的动态</div>
+                        <div class="daily">
+                            <div class="square">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                            <div class="rectangle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="opt">
+                    <div class="yes">接受</div>
+                    <div class="no">拒绝</div>
+                </div>
+                <div class="close1"></div>
+            </div>
+
+
+            <!-- 好友列表与等待列表 -->
+            <div class="list-box">
+                <!-- 左边列表 -->
+                <div class="list-cont">
+                    <div class="list-switch">
+                        <div class="slide-box"></div>
+                        <div class="friends">好友列表</div>
+                        <div class="await">等待列表</div>
+                    </div>
+
+                    <!-- 好友列表 -->
+                    <div class="list-item fri show1">
+                        <ul class="fri-item-box">
+                            <li class="fri-item">
+                                <img class="profile" src="./images/astronomy1.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">我可以学</div>
+                                        <div class="time">12:00</div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="chat-cont text-ellipsis">我可以学我可以学我可以学我可以学我可以学我可以学我可以学</div>
+                                        <div class="msg-tip">1</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fri-item">
+                                <img class="profile" src="./images/astronomy2.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">看到我就叫我学</div>
+                                        <div class="time">12:00</div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="chat-cont text-ellipsis">我可以学我可以学我可以学我可以学我可以学我可以学我可以学</div>
+                                        <div class="msg-tip msg-full">99+</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 等待列表 -->
+                    <div class="list-item awa">
+                        <ul class="awa-item-box">
+                            <li class="awa-item">
+                                <img class="profile" src="./images/搞笑头像.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">Samuel Thibault</div>
+                                        <div class="cond add-bgc1">添加</div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="apply text-ellipsis">1我可以学我可以学我可以学我可以学我可以学</div>
+                                        <div class="spread">展开</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/avatar2.jpg">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">nia</div>
+                                        <div class="cond add-bgc1">添加</div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="apply text-ellipsis">1我可以学我可以学我可以学我可以学我可以学</div>
+                                        <div class="spread">展开</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/avatar3.jpg">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">Devour.</div>
+                                        <div class="cond add-bgc1">添加</div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="apply text-ellipsis">2我可以学我可以学我可以学我可以学我可以学</div>
+                                        <div class="spread">展开</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/avatar4.jpg">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">!</div>
+                                        <div class="cond add-bgc1">添加</div>
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="apply text-ellipsis">3我可以学我可以学我可以学我可以学我可以学</div>
+                                        <div class="spread">展开</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/avatar5.jpg">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">天空i</div>
+                                        <div class="cond add-bgc1">添加</div>
+                                    </div>
+                                    <div class="apply">4我可以学</div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/搞笑头像.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">Samuel Thibault</div>
+                                        <div class="cond">等待验证</div>
+                                    </div>
+                                    <div class="apply">5我可以学</div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/搞笑头像.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">Samuel Thibault</div>
+                                        <div class="cond">等待验证</div>
+                                    </div>
+                                    <div class="apply">6我可以学</div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/搞笑头像.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">Samuel Thibault</div>
+                                        <div class="cond">等待验证</div>
+                                    </div>
+                                    <div class="apply">7我可以学</div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/搞笑头像.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">Samuel Thibault</div>
+                                        <div class="cond">等待验证</div>
+                                    </div>
+                                    <div class="apply">8我可以学</div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/搞笑头像.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">Samuel Thibault</div>
+                                        <div class="cond">等待验证</div>
+                                    </div>
+                                    <div class="apply">9我可以学</div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/搞笑头像.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">Samuel Thibault</div>
+                                        <div class="cond">等待验证</div>
+                                    </div>
+                                    <div class="apply">10我可以学</div>
+                                </div>
+                            </li>
+                            <li class="awa-item">
+                                <img class="profile" src="./images/搞笑头像.png">
+                                <div class="main-cont">
+                                    <div class="fix">
+                                        <div class="nick-name">Samuel Thibault</div>
+                                        <div class="cond">等待验证</div>
+                                    </div>
+                                    <div class="apply">11我可以学</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 右边箭头 -->
+                <div class="error">
+                    <div class="e"></div>
+                    <div class="e"></div>
+                </div>
+            </div>
+            <!-- 聊天框 -->
+            <div class="chat-box">
+                <div class="close">×</div>
+                <div class="full"></div>
+                <div class="nickName-box">
+                    <div class="name"></div>
+                    <div class="other">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                <div class="dialogue">
+                    <ul class="dialogue-cont">
+                        <li class="msg self">
+                            <div class="cont">我可以学(ง •_•)ง</div>
+                            <div class="profile"></div>
+                        </li>
+                        <li class="msg other-one">
+                            <div class="profile"></div>
+                            <div class="cont">哈哈不会我也可以学！😁</div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="tools">
+                    <div class="tool-icon"></div>
+                    <div class="tool-icon"></div>
+                    <div class="tool-icon"></div>
+                    <div class="tool-icon"></div>
+                    <div class="tool-icon"></div>
+                    <div class="tool-icon"></div>
+                    <div class="tool-icon"></div>
+                </div>
+                <div class="send">
+                    <input class="msg-text" type="text" placeholder="Message...">
+                    <div class="express"></div>
+                    <button class="send-msg"></button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Me</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/self-exploration.css">
+    <link rel="stylesheet" href="./css/bridge-plate.css">
+    <link rel="stylesheet" href="./css/market-plate.css">
+    <link rel="stylesheet" href="./css/myPlanet-plate.css">
+    <link rel="stylesheet" href="./css/mbti-bridge.css">
+    <link rel="stylesheet" href="./css/test-plate.css">
+    <link rel="stylesheet" href="./css/route-plate.css">
+    <script src="./javascript/index.js"></script>
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+    <script src="./javascript/side-nav.js"></script>
+</head>
+
+<body>
+    <div class="body-contain">
+        <div class="index-contain">
+            <!-- 头部板块 -->
+            <header>
+                <!-- 导航栏 -->
+                <nav>
+                    <div class="nav-wrap">
+                        <div class="logo">FIND ME</div>
+                        <div class="selections">
+                            <ul class="tools">
+                                <li class="bridge">
+                                    <a href="./index.html#match">主页</a>
+                                </li>
+                                <li class="spaShip">
+                                    <a href="./index.html#exploration">
+                                        自我探索站
+                                        <div class="dropdown-menu">
+                                            <a href="./test-plant.html">
+                                                <div class="test1">职业测验</div>
+                                            </a>
+                                            <a href="./self-evaluation.html">
+                                                <div class="test2">自我评价</div>
+                                            </a>
+                                            <a href="./drawing-plate.html">
+                                                <div class="test3">他人评价</div>
+                                            </a>
+                                            <a href="./value-exploration.html">
+                                                <div class="test4">价值观探索</div>
+                                            </a>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="spaStation">
+                                    <a href="./index.html#intro">
+                                        星星交流区
+                                    </a>
+                                </li>
+                                <li class="market">
+                                    <a href="./index.html#planet">成长星球</a>
+                                </li>
+                                <li class="myPlanet">
+                                    <a style="height: 100%;">
+                                        <div class="pro-head"></div>
+                                        <div class="nick-name">我可以学</div>
+                                    </a>
+                                    <div class="drop-down">
+                                        <div class="homepage">我的主页</div>
+                                        <div class="leave">退出</div>
+                                    </div>
+                                </li>
+                                <li class="signUp-btn show3"><a class="signUp" href="./login.html">登录/注册</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="header-wrap">
+
+                    <!-- 跳转图标 -->
+                    <!-- <a href=""></a>
+                    <div class="part1"></div>
+                    <div class="part2"></div>
+                    <div class="part3"></div>
+                    <div class="part4"></div> -->
+
+                    <!-- 星球 -->
+                    <!-- <div class="star-icon star1"></div>
+                    <div class="star-icon star2"></div>
+                    <div class="star-icon star3"></div>
+                    <div class="star-icon star4"></div>
+                    <div class="show-star1"></div> -->
+
+                    <!-- 下方标题、按钮 -->
+                    <div class="content">
+                        <div class="head-tit">FIND ME</div>
+                        <!-- <div class="start-btn">START</div> -->
+                    </div>
+                    </header-wrap>
+            </header>
+
+            <div class="self-exploration" id="exploration">
+                <div class="self-exploration-wrap">
+                    <div class="self-exploration-cont">
+
+                        <div class="title">
+                            自我探索站
+                        </div>
+                        <div class="explorations">
+
+                            <div class="exp job">
+                                <div class="exp-bgi"></div>
+                                <div class="text-wrap">
+                                    <div class="tit">职业测验</div>
+                                    <div class="desc">通过多种权威的职业测试题目，帮助您更加清楚的认识自己的性格优势和职业优势</div>
+                                </div>
+                                <a href="./test-plant.html"><div class="enter-btn">ENTER</div></a>
+                            </div>
+                            <div class="exp self">
+                                <div class="exp-bgi"></div>
+                                <div class="text-wrap">
+                                    <div class="tit">自我评价</div>
+                                    <div class="desc">通过对自我的评价来加深对自己的认识，帮助您更加清楚的反省并认识和了解自己</div>
+                                </div>
+                                <a href="./self-evaluation.html"><div class="enter-btn">ENTER</div></a>
+                            </div>
+                            <div class="exp others">
+                                <div class="exp-bgi"></div>
+                                <div class="text-wrap">
+                                    <div class="tit">他人评价</div>
+                                    <div class="desc">通过他人对我的评价，可以帮助您更好的认识到自己所意识不到的优势、劣势方向</div>
+                                </div>
+                                <a href="./drawing-plate.html"><div class="enter-btn">ENTER</div></a>
+                            </div>
+                            <div class="exp value">
+                                <div class="exp-bgi"></div>
+                                <div class="text-wrap">
+                                    <div class="tit">职业价值观探索</div>
+                                    <div class="desc">通过对职业价值观的选择，帮助您更加清晰地认识到自己内心独特的职业选择准则</div>
+                                </div>
+                                <a href="./value-exploration.html"><div class="enter-btn">ENTER</div></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 匹配桥梁 -->
+            <div class="mbti-contain contain " id="intro">
+                <div class="mbti-wrap">
+                    <div class="title">星星交流区</div>
+                    <div class="test-desc-contain">
+                        <div class="text text-line1 show-text">Random matching</div>
+                        <div class="text text-line2">Discuss issues together</div>
+                        <div class="text text-line3">By communicating </div>
+                        <div class="text text-line4">With different people</div>
+                        <div class="text text-line4">We can better</div>
+                        <div class="text text-line4">Understand ourselves</div>
+                    </div>
+                    <div class="bottom">
+                        <a href="./communicat-area.html">
+                            <div class="next-btn">点击开启交流之旅</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- 成长星球 -->
+            <div class="route-plate" id="planet">
+                    <div class="route-plate-wrap">
+                    <div class="tit title">成长星球</div>
+                    <div class="tit"></div>
+                    <div class="search-wrap">
+                        <div class="search-icon"></div>
+                        <div class="search-box">点击开启成长星球之旅</div>
+                    </div>
+
+                    <div class="input-tip input-tip1 add-ani">
+                        <div class="tip-text">查询感兴趣的职业规划</div>
+                    </div>
+                    <div class="input-tip input-tip2">
+                        <div class="tip-text">了解自己的职业方向</div>
+                    </div>
+                    <div class="input-tip input-tip3">
+                        <div class="tip-text">明确自己的学习路线</div>
+                    </div>
+                    <div class="input-tip input-tip4">
+                        <div class="tip-text">努力追求找到自己</div>
+                    </div>
+                    <div class="input-tip input-tip5">
+                        <div class="tip-text">实现自己设立的小目标</div>
+                    </div>
+                    <div class="track-box track-box1">
+                        <div class="dot"></div>
+                        <div class="track"></div>
+                    </div>
+                    <div class="track-box track-box2">
+                        <div class="dot"></div>
+                        <div class="track"></div>
+                    </div>
+                    <div class="track-box track-box3">
+                        <div class="dot"></div>
+                        <div class="track"></div>
+                    </div>
+                    <div class="track-box track-box4">
+                        <div class="dot"></div>
+                        <div class="track"></div>
+                    </div>
+                    <div class="track-box track-box5">
+                        <div class="dot"></div>
+                        <div class="track"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- 侧边导航栏 -->
+        <div class="side-nav">
+            <div class="guide-items">
+                <div class="detail-bgc"></div>
+                <div class="detail-item">
+                    <div class="tip-tag">自我探索站</div>
+                </div>
+                <div class="detail-item">
+                    <div class="tip-tag">星星交流区</div>
+                </div>
+                <div class="detail-item">
+                    <div class="tip-tag">成长星球</div>
+                </div>
+                <div class="detail-item go-back"><svg width="34" height="34" viewBox="0 0 34 34">
+                        <g>
+                            <path class="svg-top"
+                                d="M25 21c-.685 0-1.722-.931-2.437-1.547C21.679 22.008 19.526 23 17 23s-4.681-.994-5.564-3.552l-.376.328-.041.035c-.108.094-.22.189-.334.283l-.076.063a7.595 7.595 0 0 1-.4.307l-.019.014q-.18.128-.357.231c-.037.022-.072.04-.109.059a2.358 2.358 0 0 1-.273.127c-.036.014-.073.03-.108.041A1.154 1.154 0 0 1 9 21c-.953 0-1 .028-1-1a1.348 1.348 0 0 1 .079-.389c.013-.041.029-.084.045-.128.046-.123.1-.254.172-.394.018-.038.033-.073.054-.113a10.023 10.023 0 0 1 .417-.717c.1-.157.2-.316.31-.479l.123-.18c.143-.209.29-.418.443-.628l.036-.049c.148-.2.3-.4.447-.6l.113-.147c.148-.193.294-.381.436-.56l.021-.026c.165-.21.321-.4.466-.582C11.925 10.85 15.419 7 17 7s5.118 3.9 5.855 8.091C24.03 16.615 26 19.278 26 20c0 1.028-.1 1-1 1ZM17 9.009c-.862 0-4.007 4.18-4.007 7.489s1.794 4.493 4.007 4.493 4.007-1.184 4.007-4.493S17.862 9.009 17 9.009ZM17 16a1 1 0 1 1 1-1 1 1 0 0 1-1 1Zm-4 7a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1Zm4 1a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1Zm4-1a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1Z"
+                                fill-rule="evenodd" fill="currentColor"></path>
+                        </g>
+                    </svg></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

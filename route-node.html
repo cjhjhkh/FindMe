@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>route-node</title>
+    <link rel="stylesheet" href="./css/route-node.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="./javascript/route-node.js"></script>
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="route-node">
+        <!-- 返回按钮 -->
+        <a href="./index.html#planet">
+            <div class="preBtn"></div>
+        </a>
+        <div class="route-node-wrap">
+            <div class="plate-desc-wrap">
+                <div class="plate-desc">
+                    <div class="close"></div>
+                    <div class="tit">TODO-BINGO</div>
+                    <div class="cont">1.共可以记录25个Todo任务，每完成一个你可以点击格子进行画圈。<br>
+                        2.集满横、纵、斜方向的五个任务，则可以连在一起变成一个"Bingo"。即可开启成长星球的探索之旅，探索星球的不同风光。<br>3.当25个任务全部完成，即可收获星球探索之旅掉落下来的随机碎片噢，快快行动起来吧！
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="side-result">
+                <div class="spread-btn"></div>
+                <div class="tip-text">为您找到以下搜索结果</div>
+                <!-- <div class="blank">暂无搜索结果/(ㄒoㄒ)/~~</div> -->
+                <div class="result-box">
+                    <ul class="result-list">
+                        <!-- <li class="result-item">
+                            <div class="tit">幼儿教师</div>
+                            <div class="desc">职业定义：职业定义:幼儿教师是一份有爱心、有责任心的职业爱孩子的同时要深入的了解孩子的生活，成为孩子最亲密的伙伴,主要是对3-6岁幼儿进行启蒙…
+                            </div>
+                            <div class="sel-box">
+                                <div class="sel like">95</div>
+                                <div class="sel store">66</div>
+                            </div>
+                        </li>
+                        <li class="result-item"></li>
+                        <li class="result-item"></li> -->
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <div class="detail-cont">
+                <div class="pre-btn"></div>
+                <div class="sel-box">
+                    <div class="sel like"></div>
+                    <div class="sel store"></div>
+                </div>
+                <div class="spread-btn"></div>
+                <div class="nav-box">
+                    <div class="sel-btn active">基本信息</div>
+                    <div class="sel-btn">知识技能</div>
+                    <div class="sel-btn">职业发展</div>
+                </div>
+                <div class="result-box">
+                    <ul class="result-list select">
+                        <li class="result-item intro">
+                            <div class="tit">互联网产品经理</div>
+                            <div class="desc">
+                                <div class="def">职业定义：产品经理，是从用户角度出发,做产品策划,推动产品成型的职业。</div>
+                                <div class="name">职业其他名称：产品策划</div>
+                                <div class="relate">相关职业：产品设计、项目经理</div>
+                                <!-- <div class="recomend">相关推荐：<div class="rec-box">月薪5千—3万？计算...</div> -->
+                            </div>
+
+                        </li>
+                        <li class="result-item work-content">工作内容：
+                            1.主要进行移动端和web端两个平台的方案策划和产品设计。
+                            2.主要针对具体的产品找出需要改进的地方和可能存在的需求,并针对这些内容设计对应的方案;
+                            3.为确保产品的正常上线进行推动,与各方面人员进行沟通,确保产品能按既定思路完成;
+                            4.产品最后测试、走查、运营、推广等等需要进行持续的跟踪,直到下一个产品迭代。
+                            图集（4张）
+                            工作考核要求：
+                            所做出的产品是否满足客户需求。
+                        </li>
+                    </ul>
+
+                    <ul class="result-list">
+                        <li class="result-item skills">
+                        </li>
+                        <li class="result-item course">
+                        </li>
+                        <li class="result-item commonTools">
+                        </li>
+                        <li class="result-item knowledgeBg">
+                        </li>
+                        <li class="result-item professionalEthics">
+                        </li>
+                        <li class="result-item requirements">
+                        </li>
+                    </ul>
+
+                    <ul class="result-list">
+                        <li class="result-item environment">
+                        </li>
+                        <li class="result-item prospect">
+                        </li>
+                        <li class="result-item salary">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="search-area">
+                <input class="search" type="text" placeholder="What do you want to konw about your profession?">
+                <div class="search-btn"></div>
+                <div class="relate-box">
+                    <div class="relate-wrap">
+                        <div class="tip-text">搜索相关</div>
+                        <div class="relate">前端工程师</div>
+                    </div>
+                </div>
+                <div class="search-result-box">
+                    <div class="tip-text">搜索历史</div>
+                    <div class="history-box">
+                        <!-- <div class="history">
+                        <div class="close"></div>
+                       </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo-btn"></div>
+            <div class="todo-bingo">
+                <div class="index-tip"></div>
+                <div class="close"></div>
+                <div class="tit">TODO-BINGO</div>
+                <div class="time-set">
+                    <div class="start-time">
+                        <div class="show-time showHide">2023-10-1</div>
+                        <textarea class="data-edit" name=""></textarea>
+                    </div>
+                    <div class="track">
+                        <div class="thume"></div>
+                    </div>
+                    <div class="end-time">
+                        <div class="show-time showHide">2023-12-1</div>
+                        <textarea class="data-edit" name=""></textarea>
+                    </div>
+                </div>
+                <div class="doing">
+                    <div class="preListBtn"></div>
+                    <div class="cont-box">
+                        <ul class="todo-plan">
+                            <li class="plan">
+                                <div class="plan-text show-planEdit">基础知识</div>
+                                <input class="plan-edit" type="text">
+                                <!-- <textarea name=""></textarea> -->
+                            </li>
+                            <li class="plan">
+                                <div class="plan-text show-planEdit">进阶知识</div>
+                                <input class="plan-edit" type="text">
+                                <!-- <textarea class="plan-edit" name=""></textarea> -->
+                            </li>
+                            <li class="plan">
+                                <div class="plan-text show-planEdit">项目</div>
+                                <input class="plan-edit" type="text">
+                                <!-- <textarea class="plan-edit" name=""></textarea> -->
+                            </li>
+                            <li class="plan">
+                                <div class="plan-text show-planEdit">面试题</div>
+                                <input class="plan-edit" type="text">
+                                <!-- <textarea class="plan-edit" name=""></textarea> -->
+                            </li>
+                            <li class="plan">
+                                <div class="plan-text show-planEdit"></div>
+                                <input class="plan-edit" type="text">
+                                <!-- <textarea class="plan-edit" name=""></textarea> -->
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nextListBtn"></div>
+                </div>
+                <div class="todo-list-wrap">
+                    <div class="todo-list" id="stage1">
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                    </div>
+                    <div class="todo-list" id="stage2">
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">Axure看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">MYSQL看网课</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">实战小程序</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学css</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                    </div>
+                    <!-- <div class="todo-list">
+                        <div class="todo-item">
+                            <div class="text">学html</div>
+                            <textarea class="todo-edit" name=""></textarea>
+                        </div>
+                    </div> -->
+                </div>
+
+
+                <!-- 编辑按钮 -->
+                <div class="btn">
+                    <div class="edit-btn">编辑</div>
+                    <div class="finish-btn">Finish</div>
+                    <div class="conti">继续</div>
+                </div>
+                <div class="ask">
+                    <div class="tit">确定完成任务了咩~(*❦ω❦)</div>
+                    <div class="ask-box">
+                        <div class="cancle">俺再考虑考虑</div>
+                        <div class="conf">耶耶耶完成啦！！</div>
+                    </div>
+                </div>
+                <div class="inadequate">不能设置空任务喔~</div>
+            </div>
+
+
+
+
+            <div class="attention">
+                <div class="attention-son"></div>
+            </div>
+            <!-- <div class="a"> -->
+            <div class="planet-wrap">
+                <div class="planet"></div>
+                <div class="man"></div>
+            </div>
+            <!-- </div> -->
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

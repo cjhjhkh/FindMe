@@ -1,0 +1,460 @@
+//out:../css/
+
+
+
+/*返回按钮*/
+.preBtn {
+    position: fixed;
+    left: 27px;
+    top: 27px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/pre-btn\ \(1\).png);
+    border-radius: 50px;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #eddfff;
+    transition: all 0.2s;
+}
+
+
+
+
+.issue-plate {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/issue-bgi.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    input {
+        outline: none;
+    }
+
+    .issue-plate-wrap {
+        position: relative;
+        width: 1184px;
+        height: 561px;
+        overflow: hidden;
+    }
+
+    .issue-box {
+        opacity: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 24px;
+        padding: 15px 20px;
+
+        .tit {
+            font-size: 18px;
+            color: rgba(172, 149, 232, 1);
+            margin-bottom: 13px;
+
+
+        }
+
+        .btn {
+            width: 197px;
+            height: 36px;
+            color: #fff;
+            background-color: rgba(142, 108, 217, 1);
+            // letter-spacing: 19px;
+            text-align: center;
+            line-height: 36px;
+            border-radius: 8px;
+            margin: auto;
+            // margin-top: 18px;
+            margin-top: 22px;
+            font-size: 16px;
+        }
+
+        .hide {
+            transition: all .35s;
+            opacity: 0;
+            height: 0;
+        }
+    }
+
+    .show {
+        transition: all .6s;
+        // display: block;
+        opacity: 1;
+    }
+
+    .content {
+        width: 355px;
+        // height: 317px;
+        right: 0;
+        // bottom: 18px;
+        bottom: 44px;
+
+        .tit-input {
+            height: 42px;
+            // background-color: #fff;
+            line-height: 42px;
+            padding: 0 13px;
+            margin-bottom: 14px;
+        }
+
+        .cont-input {
+            height: 156px;
+            padding: 11px;
+        }
+
+        .tit-input,
+        .cont-input {
+            width: 100%;
+            border: 1.5px solid rgba(142, 108, 217, 1);
+            background-color: rgba(222, 208, 247, 1);
+            color: rgba(158, 134, 219, 1);
+            border-radius: 8px;
+            font-size: 16px;
+
+            &::placeholder {
+                color: rgba(158, 134, 219, 1);
+                font-size: 16px;
+            }
+        }
+
+        .cont-input {
+            resize: none;
+            outline: none;
+        }
+
+        .tit-box {
+            position: relative;
+
+            .total {
+                position: absolute;
+                height: 16px;
+                right: 11px;
+                top: 13px;
+                font-size: 14px;
+                color: rgba(158, 134, 219, 1);
+            }
+        }
+
+        .cont-box {
+            position: relative;
+
+            .total {
+                position: absolute;
+                height: 16px;
+                font-size: 14px;
+                color: rgba(158, 134, 219, 1);
+
+                right: 11px;
+                bottom: 13px;
+            }
+        }
+    }
+
+    .label {
+        max-width: 355px;
+        // height: 248px;
+        left: 0;
+        bottom: 26px;
+
+
+
+        .add-label{
+            transition: all .35s;
+            height: 24px;
+            height: 0;
+            width: 83%;
+            outline: none;
+            border: none;
+            background-color: #e6daf7;
+            border-radius: 8px;
+            color: #808080;
+            font-size: 16px;
+            line-height: 24px;
+            padding: 0 10px;
+            &::placeholder{
+                color: #808080;
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+        .addTag{
+            transition: all .35s;
+            position: relative;
+            width: 100%;
+        }
+        .confirm{
+            transition: all .35s;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 48px;
+            height: 0;
+            // height: 24px;
+            background-color: #8e6cd9;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            line-height: 24px;
+        }
+        .active{
+            transition: all .35s;
+            height: 24px;
+        }
+        .tag-box {
+            display: flex;
+            flex-wrap: wrap;
+
+            .tag-item {
+                // min-width: 109px;
+
+            }
+
+            .tag-item,
+            .add-tag {
+                flex-shrink: 0;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color: rgba(222, 208, 247, 1);
+                color: rgba(142, 108, 217, 1);
+                padding: 0 20px;
+                border-radius: 196px;
+                border: 2px solid rgba(142, 108, 217, 1);
+                font-size: 16px;
+                margin-bottom: 8px;
+                transition: all .35s;
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+            }
+
+            .add-tag {
+                position: relative;
+                width: 64px;
+                height: 30px;
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transform-origin: center center;
+                    content: '';
+                    width: 2px;
+                    height: 14px;
+                    background-color: rgba(142, 108, 217, 1);
+                    border-radius: 50px;
+                }
+
+                &::after {
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+            }
+
+            // &:nth-child(4){
+            //     .tag-item{
+
+            //     }
+            // }
+
+            .disCli {
+                transition: all .35s;
+                color: rgba(157, 154, 162, 1);
+                background-color: rgba(230, 218, 247, 1);
+                border-color: rgba(186, 186, 186, 1);
+            }
+        }
+
+        .second {
+            margin-top: 10px;
+        }
+
+        .continue {
+            margin-top: 10px;
+        }
+    }
+
+    .check-wrap {
+        display: flex;
+
+        .checkBox {
+            width: 15px;
+            height: 15px;
+            color: rgba(142, 108, 217, 1);
+            font-size: 17px;
+        }
+
+        // .now,.setTime {
+        // width: 60px;
+        // height: 60px;
+        // background-color: khaki;
+        // border-radius: -98px;
+        // }
+
+        input {
+            margin-right: 9px;
+            // border: 3px solid rgba(142, 108, 217, 1);
+            // outline: none;
+            // border-radius:3px;
+        }
+    }
+
+    .limit {
+        width: 355px;
+        // height: 224px;
+        top: 0;
+        left: 82px;
+
+        .second {
+            margin-top: 18px;
+        }
+
+        .check-wrap {
+            width: 233px;
+        }
+
+        .checkBox {
+            width: 116px;
+        }
+    }
+
+
+
+    @keyframes boat1 {
+        0% {
+            left: 34%;
+            bottom: -3%;
+            transform: rotate(0deg);
+        }
+
+        40% {
+            left: 39%;
+            bottom: 4%;
+            transform: rotate(10deg);
+        }
+
+        80%{
+            left: 46%;
+            bottom: 9%;
+        }
+
+        100% {
+            left: 50%;
+            bottom: 13%;
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes boat2 {
+        0% {
+            left: 50%;
+            bottom: 10%;
+            transform: rotate(0);
+        }
+
+        40% {
+            left: 44%;
+            bottom: 22%;
+            transform: rotate(20deg);
+        }
+
+        80%{
+            left: 38%;
+            bottom: 27%;
+            transform: rotate(39deg);
+        }
+        100% {
+            left: 36%;
+            bottom: 32%;
+            transform: rotate(20deg);
+        }
+    }
+
+    @keyframes boat3 {
+        0% {
+            left: 35%;
+            bottom: 29%;
+            transform: rotate(20deg);
+        }
+
+        40% {
+            left: 41%;
+            bottom: 36%;
+            transform: rotate(39deg);
+        }
+
+        100% {
+            left: 50%;
+            bottom: 48%;
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes boat4 {
+        0% {
+            left: 50%;
+            bottom: 48%;
+        }
+
+        40% {
+            left: 39%;
+            bottom: 67%;
+            transform: rotate(39deg);
+        }
+
+        60% {
+            left: 46%;
+            bottom: 81%;
+            transform: rotate(20deg);
+        }
+
+        100% {
+            left: 58%;
+            bottom: 96%;
+            transform: rotate(0deg);
+        }
+    }
+
+
+
+    .boat {
+        position: absolute;
+        // left: 50%;
+        // bottom: 30%;
+        // width: 157px;
+        // height: 157px;
+        width: 12vw;
+        height: 26vh;
+        background-image: url(../images/boat.png);
+        // background-image: url(../images/);
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: boat1 2s linear;
+        animation-fill-mode: forwards;
+        /*保持动画最后一个状态*/
+    }
+
+    .boat2 {
+        animation: boat2 2s linear;
+        animation-fill-mode: forwards;
+    }
+
+    .boat3 {
+        animation: boat3 2s linear;
+        animation-fill-mode: forwards;
+    }
+
+    .boat4 {
+        animation: boat4 2s linear;
+        animation-fill-mode: forwards;
+    }
+}

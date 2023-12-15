@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./javascript/login.js"></script>
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- 登录注册窗口 -->
+    <div class="login-container contain">
+        <div class="enjoy-text">enjoy the time of find me</div>
+        <!-- 宇航员 -->
+        <div class="astro"></div>
+        <div class="login-box">
+            <div class="main-box">
+
+                <!-- 登录板块 -->
+                <div class="login-cont">
+                    <div class="login-tip">登录成功</div>
+                    <div class="reg-tip">注册成功</div>
+                    <div class="fail-login">账号或密码错误</div>
+                    <div class="fail-reg">注册失败</div>
+                    <div class="login-wrap">
+                        <div class="wel-tit">Welcome to Fine me!</div>
+                        <div class="select-box">
+                            <div class="slide-box"></div>
+                            <div class="login-sel">登录</div>
+                            <div class="register-sel">注册</div>
+                        </div>
+                        <div class="input-box">
+                            <div class="phone-area">
+                                <input class="phone" type="text" placeholder="请输入邮箱">
+                            </div>
+                            <div class="password-area">
+                                <input class="password" type="password" placeholder="请输入密码">
+                            </div>
+                            <div class="check-area" style="display: flex; justify-content: space-between;">
+                                <input class="check" type="text" placeholder="请输入验证码">
+                                <img src="" class="getCode">
+                            </div>
+                            <div class="other">
+                                <div class="remember">
+                                    <input type="checkbox"> 记住密码
+                                </div>
+                                <div class="forget">
+                                    <a href="#"> 忘记密码？</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-btn">登录</div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-cont reset-box">
+                    <div class="reset-tip">重置密码成功,请重新登录</div>
+                    <div class="login-wrap">
+                        <div class="wel-tit">Welcome to Fine me!</div>
+                        <div class="reset-code">重置密码</div>
+                        <div class="input-box">
+                            <div class="phone-area">
+                                <input class="phone-reset" type="text" placeholder="请输入邮箱">
+                            </div>
+                            <div class="password-area">
+                                <input class="password-reset" type="password" placeholder="请输入密码">
+                            </div>
+                            <div class="check-area check-area-reset" style="display: flex; justify-content: space-between;">
+                                <input class="check" type="text" placeholder="请输入验证码">
+                                <div class="getCode">获取邮箱验证码</div>
+                            </div>
+                        </div>
+                        <div class="slide-check">
+                            <div class="pass-tip">验证通过！</div>
+                            <div class="fail-tip">验证失败！</div>
+                            <div class="slide-block"></div>
+                            请按住滑块，拖动到最右边
+                            <div class="bg"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

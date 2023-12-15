@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>value-change</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/value-change.css">
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+    <script src="./javascript/value-change.js"></script>
+</head>
+
+<body>
+    <div class="value-change">
+        <!-- 返回按钮 -->
+        <a href="./value-exploration.html">
+            <div class="pre-btn"></div>
+        </a>
+        <div class="value-change-wrap">
+            <div class="tip-desc cont-active">你满意刚刚的职业价值观选择吗？<br>
+                不满意的话可以和我进行交换噢！
+                <div class="continue">点击任意位置继续</div>
+            </div>
+            <div class="swap-value">
+                <div class="sel-value" draggable="true" id="d1">工作环境</div>
+                <div class="sel-value" draggable="true" id="d2">组织氛围</div>
+                <div class="sel-value" draggable="true" id="d3">他人认可</div>
+                <div class="sel-value" draggable="true" id="d4">开拓创造</div>
+                <div class="sel-value" draggable="true" id="d5">道德理想</div>
+                <div class="sel-value" draggable="true" id="d6">持续挑战</div>
+                <div class="sel-value" draggable="true" id="d7">工作稳定</div>
+                <div class="sel-value" draggable="true" id="d8">人际和谐</div>
+                <div class="sel-value" draggable="true" id="d9">成长发展</div>
+            </div>
+            <div class="already-value">
+                <div class="asker"></div>
+                <div class="title">已 有 价 值 观</div>
+                <div class="container">
+                    <div class="value-box">
+                        <div class="sel-value" draggable="true" id="d10">收入待遇</div>
+                        <div class="sel-value" draggable="true" id="d11">管理权力</div>
+                        <div class="sel-value" draggable="true" id="d12">志趣满足</div>
+                        <div class="sel-value" draggable="true" id="d13">收入待遇</div>
+                        <div class="sel-value" draggable="true" id="d14">管理权力</div>
+                        <div class="sel-value" draggable="true" id="d15">志趣满足</div>
+                    </div>
+                    <div class="change-area">
+                        <div class="drop-area al">拖动已有<br>价值观至此</div>
+                        <div class="exchange-btn">EXCHANGE</div>
+                        <div class="drop-area wait">拖动想交换的<br>价值观至此</div>
+                        <div class="next-btn">NEXT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

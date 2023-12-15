@@ -1,0 +1,366 @@
+.preBtn {
+  position: fixed;
+  left: 27px;
+  top: 27px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/pre-btn\ \(1\).png);
+  border-radius: 50px;
+  background-size: 70%;
+  background-position: center;
+  background-color: #eddfff;
+  transition: all 0.2s;
+}
+.preBtn:hover {
+  background-color: #ddc8f8;
+}
+.drawing-plate {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url(../images/draw-bgi.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  /*星星动画*/
+  /*星星*/
+}
+.drawing-plate .drawing-plate-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 1000px;
+  height: 100%;
+  margin: auto;
+}
+.drawing-plate .draw-plate-contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 538px;
+  width: 100%;
+}
+.drawing-plate .draw-plate-contain .title {
+  font-size: 26px;
+  line-height: 28.8px;
+  font-weight: 500;
+  color: #fff;
+  margin: 49px 0 24px 0;
+}
+.drawing-plate .draw-plate-contain .sel-box {
+  position: relative;
+  width: 100%;
+  height: 464px;
+}
+.drawing-plate .draw-plate-contain .join-box {
+  display: none;
+  bottom: 0;
+  right: 0;
+  width: 430px;
+  background-color: #fff;
+  position: absolute;
+  padding: 32px 40px 32px;
+  border-radius: 30px;
+}
+.drawing-plate .draw-plate-contain .main-box {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 430px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 30px;
+}
+.drawing-plate .draw-plate-contain .show1 {
+  display: block;
+}
+.drawing-plate .draw-plate-contain .tit {
+  color: #8d69cf;
+  font-size: 23px;
+  text-align: center;
+}
+.drawing-plate .draw-plate-contain .intro {
+  font-size: 18px;
+  color: #808080;
+  line-height: 36px;
+  padding: 20px 0;
+}
+.drawing-plate .draw-plate-contain .sel-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px;
+}
+.drawing-plate .draw-plate-contain .join,
+.drawing-plate .draw-plate-contain .create {
+  width: 147px;
+  height: 37px;
+  background-color: #a88cdd;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 38px;
+  transition: all 0.3s;
+}
+.drawing-plate .draw-plate-contain .join:hover,
+.drawing-plate .draw-plate-contain .create:hover {
+  background-color: rgba(168, 140, 221, 0.85);
+}
+.drawing-plate .join-box .input-code,
+.drawing-plate .join-box .set-box,
+.drawing-plate .join-box .text,
+.drawing-plate .join-box .check-box,
+.drawing-plate .join-box .link,
+.drawing-plate .join-box .open {
+  width: 100%;
+  margin-bottom: 18px;
+  color: #808080;
+}
+.drawing-plate .join-box .set-box {
+  display: block;
+}
+.drawing-plate .join-box .enter-room {
+  width: 120px;
+  text-align: center;
+  padding: 12px 12px;
+  border-radius: 12px;
+  margin: auto;
+  background-color: #a88cdd;
+  color: #fff;
+  margin-top: 18px;
+}
+.drawing-plate .join-box .close {
+  position: relative;
+  right: -346px;
+  top: -18px;
+  width: 19px;
+  height: 19px;
+  background-image: url(../images/close.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@keyframes star-ani {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  75% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.drawing-plate .littleStar {
+  position: absolute;
+  left: 128px;
+  top: 30px;
+  width: 62px;
+  height: 62px;
+  background-image: url(../images/star.png);
+  background-size: cover;
+}
+.drawing-plate .littleStar:nth-child(1) {
+  left: 18px;
+  top: 25px;
+  width: 40px;
+  height: 43px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(2) {
+  left: 5vw;
+  top: 12vh;
+  width: 5vw;
+  height: 10vh;
+  animation-delay: 0.1s;
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(3) {
+  left: 13vw;
+  top: 10vh;
+  width: 3%;
+  height: 6%;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(4) {
+  left: 16.5vw;
+  top: 19.3vh;
+  width: 81px;
+  height: 81px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(5) {
+  left: 31.2vw;
+  top: 22.4vh;
+  width: 28px;
+  height: 28px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(6) {
+  left: 8.7vw;
+  top: 6.2vh;
+  width: 48px;
+  height: 48px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(7) {
+  left: 23.5vw;
+  top: 20.2vh;
+  width: 28px;
+  height: 28px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(8) {
+  left: 34.7vw;
+  top: 15.4vh;
+  width: 88px;
+  height: 88px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(9) {
+  left: 26.8vw;
+  top: 12.1vh;
+  width: 54px;
+  height: 54px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(10) {
+  left: 42.5vw;
+  top: 14vh;
+  width: 40px;
+  height: 43px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(11) {
+  left: 53.5vw;
+  top: 7.2vh;
+  width: 3vw;
+  height: 7vh;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(12) {
+  left: 57.9vw;
+  top: 4.6vh;
+  width: 27px;
+  height: 27px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(13) {
+  left: 63.5vw;
+  top: 2vh;
+  width: 75px;
+  height: 75px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(14) {
+  left: 72.5vw;
+  top: 6.2vh;
+  width: 7vw;
+  height: 7vw;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(15) {
+  left: 82vw;
+  top: 0vh;
+  width: 40px;
+  height: 43px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(16) {
+  left: 48.3vw;
+  top: 20vh;
+  width: 40px;
+  height: 43px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(17) {
+  left: 89.7vw;
+  top: 6.4vh;
+  width: 40px;
+  height: 43px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(18) {
+  left: 93.8vw;
+  top: 17.4vh;
+  width: 40px;
+  height: 43px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(19) {
+  left: 81.4vw;
+  top: 1.4vh;
+  width: 95px;
+  height: 95px;
+  animation-delay: 0.1s;
+  transform: rotate(3deg);
+  animation: star-ani 3s infinite linear;
+}
+.drawing-plate .littleStar:nth-child(2n) {
+  animation-delay: -2s;
+  animation-duration: 5s;
+}
+.drawing-plate .littleStar:nth-child(2n-1) {
+  animation-delay: -4s;
+  animation-duration: 5s;
+}
+.drawing-plate .littleStar:nth-child(3n) {
+  animation-delay: -3s;
+  animation-duration: 5s;
+}
+.draw-plate,
+.join-box,
+.input-code {
+  width: 100%;
+  margin-bottom: 18px;
+  color: #808080;
+}
+.invite-code {
+  height: 40px;
+  border-radius: 16px;
+  padding-left: 27px;
+  width: 229px;
+  box-sizing: border-box;
+  color: #808080;
+  font-size: 14px;
+}

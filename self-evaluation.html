@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>self-evaluation</title>
+    <link rel="stylesheet" href="./css/self-evaluation.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="./javascript/self-evaluation.js"></script>
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+    <div class="self-evaluation">
+        <a href="./index.html#exploration">
+            <div class="preBtn"></div>
+        </a>
+        <div class="self-evaluation-wrap">
+            <div class="save-btn"></div>
+            <!-- <div class="share-btn"></div> -->
+            <div class="turn-pre-page"></div>
+            <div class="turn-next-page"></div>
+            <div class="main-cont">
+                <ul class="book">
+                    <div class="tip-wrap tip1">
+                        <div class="tip">
+                            <div class="tip-main">
+                                <div class="tip-text">
+                                    <div class="text-cont">我们一起玩个游戏吧，试着用文字、图画或者贴纸的方式想象“我”的样子吧！</div>
+                                    <div class="continue">点击任意位置继续</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-wrap tip2">
+
+                        <div class="tip">
+                            <div class="tip-main">
+                                <div class="tip-text">
+                                    <div class="text-cont">如果是职业的话？你觉得我擅长做什么工作呢？</div>
+                                    <div class="continue">点击任意位置继续</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="page page1 front"></li>
+                    <li class="page page2 back">
+
+                        <!-- 头像 -->
+                        <div class="avatar">
+                            <!-- <img src="./images/avatar.jpg"> -->
+                            <img src="./images/astronomy2.png" alt="">
+                            <div class="add-change">
+                                <div class="add"></div>
+                                <div class="text">点击修改头像</div>
+                            </div>
+                        </div>
+                        <!-- 上传头像表单 -->
+                        <form id="uploadForm" class="updataAva">
+                            <!-- <label for="avatar">请选择头像：</label> -->
+                            <input type="file" id="avatar" name="avatar" accept="image/*">
+                            <button type="submit" id="sub">上传</button>
+                        </form>
+
+
+                        <div class="self-intro">你好呀，我是<input class="user-name" type="text"
+                                style="width: 50px; height: 17px;">。我的职业是<input class="user-job" type="text"
+                                style="width: 40px; height: 17px;">噢！我的生日是<input class="year" type="text"
+                                style="width: 36px; height: 17px;">年<input class="month" type="text"
+                                style="width: 20px; height: 17px;">月<input class="data" type="text"
+                                style="width: 20px; height: 17px;">日。我来自<input class="area" type="text"
+                                style="width: 46px; height: 17px;">。很高兴认识你，我们交个朋友吧!</div>
+                    </li>
+                    <li class="page page3 front">
+                        <div class="adv show1">
+                            <div class="add-box">
+                                <input type="text" class="add">
+                            </div>
+                            <div class="add-box">
+                                <input type="text" class="add">
+                            </div>
+                            <div class="add-box">
+                                <input type="text" class="add">
+                            </div>
+                            <div class="add-box">
+                                <input type="text" class="add">
+                            </div>
+                        </div>
+                        <div class="disadv">
+                            <div class="add-box">
+                                <input type="text" class="add">
+                            </div>
+                            <div class="add-box">
+                                <input type="text" class="add">
+                            </div>
+                            <div class="add-box">
+                                <input type="text" class="add">
+                            </div>
+                            <div class="add-box">
+                                <input type="text" class="add">
+                            </div>
+                        </div>
+                        <div class="change-box">
+                            <div class="text">Advantage</div>
+                            <div class="change-btn">
+                                <div class="slider"></div>
+                            </div>
+                            <div class="text">Disadvantage</div>
+                        </div>
+                    </li>
+                    <li class="page page4 back">
+                        <div class="tit">现在的我是这样的...</div>
+                        <div class="catch-img">
+                            <canvas id="now" width="448px" height="435px"></canvas>
+                        </div>
+                        <ul class="tool-list">
+                            <li class="tool write">
+                                <div class="text-box"></div>
+                            </li>
+                            <li class="tool draw">
+                                <div class="draw-tools tool-cont">
+                                    <div class="draw-tool">
+                                        <div class="tool-item pen bgc"></div>
+                                        <div class="tool-item earsea bgc"></div>
+                                        <div class="tool-item clear bgc"></div>
+                                    </div>
+                                    <div class="draw-tool color-tool">
+                                        <div class="tool-item">
+                                            <input type="color" class="color">
+                                            <div class="show-color"></div>
+                                        </div>
+                                    </div>
+                                    <div class="draw-tool pen-tool">
+                                        <div class="tool-item"></div>
+                                        <div class="tool-item"></div>
+                                        <div class="tool-item"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tool hot">
+                                <div class="tag-sel tool-cont">
+                                    <div class="search-box"></div>
+                                    <div class="stickers-wrap">
+                                        <div class="stickers">
+                                            <!-- <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div> -->
+                                            <img src="./images/job-tag1.png" class="sticker" draggable="true"
+                                                id="drag1">
+                                            <img src="./images/job-tag2.png" class="sticker" draggable="true"
+                                                id="drag2">
+                                            <img src="./images/job-tag3.png" class="sticker" draggable="true"
+                                                id="drag3">
+                                            <img src="./images/job-tag4.png" class="sticker" draggable="true"
+                                                id="drag4">
+                                            <img src="./images/job-tag5.png" class="sticker" draggable="true"
+                                                id="drag5">
+                                            <img src="./images/job-tag6.png" class="sticker" draggable="true"
+                                                id="drag6">
+                                            <img src="./images/job-tag7.png" class="sticker" draggable="true"
+                                                id="drag7">
+                                            <img src="./images/job-tag8.png" class="sticker" draggable="true"
+                                                id="drag8">
+                                            <img src="./images/job-tag9.png" class="sticker" draggable="true"
+                                                id="drag9">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tool figure">
+                                <div class="tag-sel tool-cont">
+                                    <div class="search-box"></div>
+                                    <div class="stickers-wrap">
+                                        <div class="stickers">
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <!-- <img src="./images/job-tag1.png" class="sticker" draggable="true" id="drag1">
+                                            <img src="./images/job-tag2.png" class="sticker" draggable="true" id="drag2">
+                                            <img src="./images/job-tag3.png" class="sticker" draggable="true" id="drag3">
+                                            <img src="./images/job-tag4.png" class="sticker" draggable="true" id="drag4">
+                                            <img src="./images/job-tag5.png" class="sticker" draggable="true" id="drag5">
+                                            <img src="./images/job-tag6.png" class="sticker" draggable="true" id="drag6">
+                                            <img src="./images/job-tag7.png" class="sticker" draggable="true" id="drag7">
+                                            <img src="./images/job-tag8.png" class="sticker" draggable="true" id="drag8">
+                                            <img src="./images/job-tag9.png" class="sticker" draggable="true" id="drag9"> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tool condit">
+                                <div class="tag-sel tool-cont">
+                                    <div class="search-box"></div>
+                                    <div class="stickers-wrap">
+                                        <div class="stickers">
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <!-- <img src="./images/job-tag1.png" class="sticker" draggable="true" id="drag1">
+                                            <img src="./images/job-tag2.png" class="sticker" draggable="true" id="drag2">
+                                            <img src="./images/job-tag3.png" class="sticker" draggable="true" id="drag3">
+                                            <img src="./images/job-tag4.png" class="sticker" draggable="true" id="drag4">
+                                            <img src="./images/job-tag5.png" class="sticker" draggable="true" id="drag5">
+                                            <img src="./images/job-tag6.png" class="sticker" draggable="true" id="drag6">
+                                            <img src="./images/job-tag7.png" class="sticker" draggable="true" id="drag7">
+                                            <img src="./images/job-tag8.png" class="sticker" draggable="true" id="drag8">
+                                            <img src="./images/job-tag9.png" class="sticker" draggable="true" id="drag9"> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tool animal">
+                                <div class="tag-sel tool-cont">
+                                    <div class="search-box"></div>
+                                    <div class="stickers-wrap">
+                                        <div class="stickers">
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <div class="sticker"></div>
+                                            <!-- <img src="./images/job-tag1.png" class="sticker" draggable="true" id="drag1">
+                                            <img src="./images/job-tag2.png" class="sticker" draggable="true" id="drag2">
+                                            <img src="./images/job-tag3.png" class="sticker" draggable="true" id="drag3">
+                                            <img src="./images/job-tag4.png" class="sticker" draggable="true" id="drag4">
+                                            <img src="./images/job-tag5.png" class="sticker" draggable="true" id="drag5">
+                                            <img src="./images/job-tag6.png" class="sticker" draggable="true" id="drag6">
+                                            <img src="./images/job-tag7.png" class="sticker" draggable="true" id="drag7">
+                                            <img src="./images/job-tag8.png" class="sticker" draggable="true" id="drag8">
+                                            <img src="./images/job-tag9.png" class="sticker" draggable="true" id="drag9"> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tool close-list"></li>
+                        </ul>
+                    </li>
+                    <li class="page page5 front">
+
+                        <div class="tit">理想的我是这样的...</div>
+
+                        <div class="catch-img2">
+                            <canvas id="future" width="448px" height="435px"></canvas>
+                        </div>
+                    </li>
+                    <li class="page page6 back">
+                        <div class="tit">现在的我的职业是这样的...</div>
+
+                        <div class="edit-contain">
+                            <div class="job-box">
+                                <div class="sticker-area">
+                                    <div class="tipTit">职业头像</div>
+                                    <div class="tipText">（选择贴纸拖动到此处）</div>
+                                </div>
+                                <input class="futureJob" type="text" placeholder="职业名称">
+                                <textarea class="job-desc" cols="30" rows="10" placeholder="描述一下你对未来职业的想法吧"></textarea>
+                            </div>
+                            <div class="job-box">
+                                <div class="sticker-area">
+                                    <div class="tipTit">职业头像</div>
+                                    <div class="tipText">（选择贴纸拖动到此处）</div>
+                                </div>
+                                <input class="futureJob" type="text" placeholder="职业名称">
+                                <textarea class="job-desc" cols="30" rows="10" placeholder="描述一下你对未来职业的想法吧"></textarea>
+                            </div>
+                        </div>
+                        <!-- <canvas id="now-job" width="448px" height="435px"></canvas> -->
+                        <ul class="tool-list">
+                            <li class="tool write"></li>
+                            <!-- 职业 -->
+                            <li class="tool job">
+                                <div class="job-sel">
+                                    <div class="search-box"></div>
+                                    <div class="stickers-wrap">
+                                        <div class="stickers">
+                                            <img src="./images/job-tag1.png" class="sticker" draggable="true"
+                                                id="drag1">
+                                            <img src="./images/job-tag2.png" class="sticker" draggable="true"
+                                                id="drag2">
+                                            <img src="./images/job-tag3.png" class="sticker" draggable="true"
+                                                id="drag3">
+                                            <img src="./images/job-tag4.png" class="sticker" draggable="true"
+                                                id="drag4">
+                                            <img src="./images/job-tag5.png" class="sticker" draggable="true"
+                                                id="drag5">
+                                            <img src="./images/job-tag6.png" class="sticker" draggable="true"
+                                                id="drag6">
+                                            <img src="./images/job-tag7.png" class="sticker" draggable="true"
+                                                id="drag7">
+                                            <img src="./images/job-tag8.png" class="sticker" draggable="true"
+                                                id="drag8">
+                                            <img src="./images/job-tag9.png" class="sticker" draggable="true"
+                                                id="drag9">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <!-- <li class="tool draw"></li>
+                            <li class="tool hot"></li>
+                            <li class="tool figure"></li>
+                            <li class="tool condit"></li>
+                            <li class="tool animal"></li> -->
+
+                        </ul>
+                    </li>
+                    <li class="page page7 front">
+                        <!-- <canvas id="future-job" width="448px" height="435px"></canvas> -->
+                        <div class="tit">理想的我的职业是这样的...</div>
+                        <div class="edit-contain">
+                            <div class="job-box">
+                                <div class="sticker-area">
+                                    <div class="tipTit">职业头像</div>
+                                    <div class="tipText">（选择贴纸拖动到此处）</div>
+                                </div>
+                                <input class="futureJob" type="text" placeholder="职业名称">
+                                <textarea class="job-desc" cols="30" rows="10" placeholder="描述一下你对未来职业的想法吧"></textarea>
+                            </div>
+                            <div class="job-box">
+                                <div class="sticker-area">
+                                    <div class="tipTit">职业头像</div>
+                                    <div class="tipText">（选择贴纸拖动到此处）</div>
+                                </div>
+                                <input class="futureJob" type="text" placeholder="职业名称">
+                                <textarea class="job-desc" cols="30" rows="10" placeholder="描述一下你对未来职业的想法吧"></textarea>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page page8 back">
+                        <div class="sum show2"></div>
+                        <div class="sum"></div>
+                        <div class="sum"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

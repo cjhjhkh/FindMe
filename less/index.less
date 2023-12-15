@@ -1,0 +1,831 @@
+//out:../css/
+
+/*整屏切换*/
+.index-contain {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    header,
+    .self-exploration,
+    .test-plate,
+    .drawing-plate,
+
+    .mbti-contain,
+    .bridge-plate,
+    .spaShip-plate,
+    .spaStation-plate,
+    .market-plate,
+    .myPlanet-plate,
+    .route-plate {
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        scroll-snap-align: start;
+    }
+}
+
+
+.select-box,
+.login-btn,
+.remember,
+.getCode {
+    /*鼠标变小手*/
+    cursor: pointer;
+}
+
+.blank {
+    width: 100%;
+    height: 90px;
+}
+
+header {
+    position: relative;
+    // width: 100vw;
+    height: 100vh;
+    background-color: plum;
+    // background-image: url(../images/首页_proc.jpg);
+    background-image: url(../images/无字首页_proc.jpg);
+    // background-image: url(../images/index-bgi.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /*背景图动画*/
+    .clounds {
+        position: absolute;
+        z-index: 55;
+        width: 100vw;
+        height: 100vh;
+        .clound {
+            position: absolute;
+            bottom: 0;
+            width: 500px;
+            height: 200px;
+            background-size: contain;
+        }
+
+        .r-t {
+            right: 0;
+            background-image: url(../images/clound-r-t.png);
+        }
+
+        .r-b {
+            right: 0;
+            background-image: url(../images/clound-r-b.png);
+        }
+
+        .l-t {
+            z-index: 4;
+            left: -26px;
+            background-image: url(../images/clound-l-t.png);
+            position: absolute;
+            bottom: -44px;
+            width: 718px;
+            height: 271px;
+            background-size: contain;
+        }
+
+        .l-b {
+            z-index: 8;
+            left: 0;
+            background-image: url(../images/clound-l-b.png);
+        }
+    }
+
+
+
+    .header-wrap {
+        position: relative;
+        // width: 1360px;
+        width: 1000px;
+        height: 100%;
+        margin: auto;
+
+
+        /*跳转图标*/
+        .part1,
+        .part2,
+        .part3,
+        .part4 {
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @keyframes a {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+                // transform: scale(.9);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+        .part1 {
+            width: 59px;
+            height: 60px;
+            left: 20%;
+            top: 18%;
+            background-image: url(../images/part1.png);
+            animation: a 3s infinite linear;
+        }
+
+        .part2 {
+            background-image: url(../images/part2.png);
+            left: 75.5%;
+            top: 17%;
+            width: 50px;
+            height: 43px;
+            animation: a 3s infinite linear;
+        }
+
+        .part3 {
+            left: 24%;
+            top: 42%;
+            height: 40px;
+            width: 42px;
+            background-image: url(../images/part3.png);
+            animation: a 3s infinite linear;
+        }
+
+
+        /*星球*/
+        .star-icon {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+        }
+
+        .star1 {
+            width: 194px;
+            height: 190px;
+            left: -0.5%;
+            top: 33%;
+            background-image: url(../images/purpleStar.png);
+            transition: all .3s;
+
+            &:hover {
+                /*鼠标移入，从另一个地方出现*/
+                transition: all .3s;
+                transform: scale(.8) translateY(110px) translateX(-40px);
+
+                ~.show-star1 {
+                    transition: all .3s;
+
+                    transform: translateY(46px);
+                    transform: scale(1.1) translateY(-90px) translateX(-30px);
+
+                }
+            }
+        }
+
+        .star2 {
+            width: 189px;
+            height: 127px;
+            left: -11.5%;
+            top: 6%;
+            background-image: url(../images/yellowStar.png);
+        }
+
+        .star3 {
+            width: 191px;
+            height: 160px;
+            left: 62.5%;
+            top: 56%;
+            background-image: url(../images/greenStar.png);
+        }
+
+
+        /*后来出现的位置*/
+        .show-star1 {
+            position: absolute;
+            width: 130px;
+            height: 124px;
+            left: 56.5%;
+            top: 66%;
+            background-image: url(../images/purpleStar.png);
+            transform: scale(.9);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            // height: 492px;
+            height: 76%;
+        }
+
+        .head-tit {
+            width: 445px;
+            height: 90px;
+            font-size: 96px;
+            font-weight: 800;
+            margin-bottom: 54px;
+            line-height: 90px;
+        }
+
+
+    }
+}
+
+body{
+    background-image: url(../images/login-bgi.png);
+    overflow: hidden;
+}
+
+.enjoy-text{
+    position: absolute;
+    top: 14%;
+    left: 15%;
+    width: 439px;
+    height: 112px;
+    font-size: 61px;
+    line-height: 76px;
+}
+/*登录注册窗口*/
+.login-container {
+    // background-image: url(../images/登录.png);
+    // background-image: url(../images/login-bgi.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    // background-color: salmon;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.45s linear;
+
+    // nav .nav-wrap {
+    //     width: 1280px;
+    // }
+
+    /*宇航员动画*/
+    @keyframes astroAni {
+        0%{
+            left: -2px;
+            bottom: 2%;
+        }
+        50%{
+            left: 10%;
+            bottom: 3%;
+        }
+        100%{
+            left: 17%;
+            bottom: 6%;
+        }
+    }
+    .astro{
+        position: absolute;
+        left: 17%;
+        bottom: 6%;
+        width: 19%;
+        height: 50%;
+        background-image: url(../images/astronomy1.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: astroAni 3s linear;
+    }
+    .main-box {
+        position: relative;
+        height: 500px;
+        width: 1068px;
+        margin: auto;
+
+        .login-cont {
+            position: absolute;
+            right: 0;
+            // top: 19px;
+            top: 127px;
+            width: 40.1%;
+            background-color: #fff;
+            padding-top: 20px;
+            border-radius: 16px;
+            padding: 43px 42px;
+            border-radius: 31px;
+
+            /*注册、登录 成功、失败提示*/
+            .login-tip,
+            .reg-tip,
+            .fail-login,
+            .fail-reg {
+                display: none;
+                opacity: 0;
+                position: absolute;
+                top: 18px;
+                left: 40%;
+                height: 26px;
+                background-color: rgba(216, 216, 216, .8);
+                color: #fff;
+                font-size: 12px;
+                padding: 0 20px;
+                border-radius: 8px;
+                line-height: 26px;
+                transition: all .3s;
+            }
+
+            .fail-login {
+                left: 35%;
+            }
+
+            @keyframes tipAni {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: translateY(-4px);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translateY(-8px);
+                }
+            }
+
+            //提示动画
+            .show-tip {
+                animation: tipAni .9s linear;
+            }
+
+
+            .login-wrap {
+                width: 100%;
+            }
+
+            .wel-tit {
+                color: #444c56;
+                text-align: center;
+            }
+
+            .select-box,
+            .reset-code {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 0 2px;
+                width: 258px;
+                height: 40px;
+                background-color: #e3d5ff;
+                margin: auto;
+                margin-top: 20px;
+                margin-bottom: 28px;
+                border-radius: 100px;
+
+                /*滑块*/
+                .slide-box {
+                    position: relative;
+                    width: 126px;
+                    height: 90%;
+                    background-color: #a88cdd;
+                    border-radius: 30px;
+                    transition: all .35s linear;
+                    right: 0;
+                }
+
+                .active {
+                    right: -127px;
+                }
+
+                .login-sel,
+                .register-sel {
+                    position: absolute;
+                    z-index: 1;
+                    width: 50%;
+                    height: 100%;
+                    line-height: 40px;
+                    text-align: center;
+                }
+
+                .login-sel {
+                    left: 0;
+                    border-radius: 30px 0 0 30px;
+                }
+
+                .register-sel {
+                    right: 0;
+                    border-radius: 0 30px 30px 0;
+                }
+            }
+
+            .input-box {
+                width: 100%;
+            }
+
+            .phone-area,
+            .password-area,
+            .check-area,.check-area2 {
+                height: 56px;
+
+                .text {
+                    color: #444c56;
+                    font-size: 16px;
+                    margin-bottom: 9px;
+                }
+                
+                input {
+                    width: 100%;
+                    height: 39px;
+                    border: 2px solid #e3d5ff;
+                    outline: none;
+                    font-size: 12px;
+                    color: #444c56;
+                    padding: 0 25px;
+                    transition: .2s ease;
+                    &:focus {
+                        outline: none;
+                        border-color: #dacafa;
+                        background-color: #fff;
+                        box-shadow: 0 0 0 2px rgb(129 140 248 / 30%);
+
+                        input::placeholder {
+                            color: none;
+                        }
+                    }
+                }
+                
+                // 输入为空时文字变红
+                .red-placeholder::placeholder {
+                    color: red;
+                }
+
+                input::placeholder {
+                    text-align: start;
+                }
+
+                // .hide-text::placeholder{
+
+                // }
+
+                /*验证码*/
+                // .check-area{   
+                //     display: flex;
+
+                // }
+                .check {
+                    width: 63%;
+                }
+
+                .getCode {
+                    width: 109px;
+                    height: 39px;
+                    line-height: 39px;
+                    margin-left: 8px;
+                    background-color: #a88cdd;
+                    border: none;
+                    // font-size: 15px;
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+
+            .remember,
+            .forget a {
+                color: #444c56;
+                font-size: 13px;
+            }
+
+            .other {
+                display: flex;
+                justify-content: space-between;
+                height: 31px;
+                align-items: center;
+            }
+
+            .login-btn,
+            .confirm-btn {
+                width: 184px;
+                height: 35px;
+                background-color: #a88cdd;
+                margin: auto;
+                margin-top: 13px;
+                // border-radius: 41px;
+                text-align: center;
+                line-height: 35px;
+            }
+
+            .select-box .slide-box,
+            .select-box,
+            .select-box,
+            input,
+            .getCode,
+            .login-btn,
+            .confirm-btn {
+                border-radius: 13px;
+            }
+
+
+
+            //重置密码
+
+            .reset-code {
+                position: relative;
+                z-index: 2;
+                display: block;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 13px;
+                background-color: #a88cdd;
+            }
+
+
+        }
+
+        .reset-box {
+            display: none;
+
+            /*重置密码成功提示*/
+            .reset-tip {
+                display: none;
+                opacity: 0;
+                position: absolute;
+                top: 18px;
+                left: 30%;
+                height: 26px;
+                background-color: rgba(216, 216, 216, .8);
+                color: #fff;
+                font-size: 12px;
+                padding: 0 20px;
+                border-radius: 8px;
+                line-height: 26px;
+                transition: all .3s;
+            }
+
+            @keyframes tipAni {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: translateY(-4px);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translateY(-8px);
+                }
+            }
+
+            //提示动画
+            .show-tip {
+                animation: tipAni .8s linear;
+            }
+
+            .slide-check {
+                position: relative;
+                width: 100%;
+                height: 39px;
+                font-size: 12px;
+                color: #5e656e;
+                line-height: 39px;
+                text-align: center;
+                border-radius: 13px;
+                background-color: #e8e8e8;
+
+                .slide-block {
+                    position: absolute;
+                    top: 2px;
+                    left: 3px;
+                    z-index: 1;
+                    width: 60px;
+                    height: 90%;
+                    background-color: #fff;
+                    border-radius: 13px;
+                }
+
+                .slide-block::before,
+                .slide-block::after {
+                    content: "";
+                    position: absolute;
+                    top: 14px;
+                    width: 7px;
+                    height: 7px;
+                    border: 2px solid #e8e8e8;
+                    border-left: none;
+                    border-bottom: none;
+                    transform: rotate(45deg);
+                }
+
+                .slide-block::before {
+                    right: 24px;
+                }
+
+                .slide-block::after {
+                    right: 32px;
+                }
+
+                .bg {
+                    position: absolute;
+                    top: 2px;
+                    left: 3px;
+                    height: 90%;
+                    width: 0px;
+                    background-color: #cac6c6;
+                    border-radius: 13px 0 0 13px;
+                }
+
+                /*验证通过提示*/
+                .pass-tip,
+                .fail-tip {
+                    // display: none;
+                    position: absolute;
+                    left: 43%;
+                    top: 0;
+                    z-index: 22;
+                    font-size: 12px;
+                    // color: #94a3b8;
+                    color: #cdeac7;
+                    transform: scale(0);
+                    transition: all .3s;
+                }
+
+                .fail-tip {
+                    // display: block;
+                    color: rgb(245, 182, 182);
+                }
+
+                .show-pass {
+                    display: block;
+                    transform: scale(1.1);
+                }
+
+                .block-return {
+                    transition: all .3s;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.body-contain {
+    width: 100vw;
+    // height: 100px;
+    // background-color: khaki;
+}
+
+
+
+/*侧边导航栏*/
+.side-nav {
+    transition: all .3s;
+    // display: none;
+    opacity: 0;
+    width: 54px;
+    // background-color: #fff;
+    background-color: rgba(125, 108, 180, 0.6);
+    position: fixed;
+    margin-left: 555px;
+    left: 50%;
+    bottom: 14%;
+    z-index: 11;
+    border-radius: 54px;
+    box-shadow: 0 0 8px 1px #0000000d;
+
+    // overflow: hidden;
+    .guide-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+
+        // background-color: #fff;
+        // overflow: hidden;
+        .detail-item,
+        .detail-bgc {
+            width: 35px;
+            height: 35px;
+            /* padding-top: 15px; */
+            margin: 3px 0;
+            // background-color: khaki;
+            // background-color: rgba(226, 209, 255,.6);
+            border-radius: 34px;
+
+
+        }
+
+        .detail-item {
+            position: relative;
+            transition: all .5s;
+
+            &:hover {
+                .tip-tag {
+                    opacity: 1;
+                }
+                transition: all .5s;
+                background-color: rgba(226, 209, 255, .35);
+            }
+            // {
+                background-size: 60%;
+                background-position: 50% 50%;
+            // }
+            &:nth-child(2){
+                background-image: url(../images/test-icon.png);
+            }
+            &:nth-child(3){
+                background-image: url(../images/match-icon.png);
+            }
+            &:nth-child(4){
+                background-image: url(../images/paint-icon.png);
+            }
+            // &:nth-child(5){
+            //     background-image: url(../images/route-icon.png);
+            // }
+        }
+
+        .tip-tag {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            right: 58px;
+            top: 1.5px;
+            white-space: nowrap;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            border-radius: 8px;
+            padding: 0 8px;
+            background-color: rgba(226, 209, 255, .6);
+            transition: all .5s;
+
+            &::after {
+                // transition: all .35s;
+                position: absolute;
+                right: -6.5px;
+                top: 7px;
+                content: '';
+                width: 0;
+                height: 0;
+                // border: khaki;
+                border-top: 7px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-left: 7px solid rgba(226, 209, 255, .6);
+                border-right: 0px solid transparent;
+            }
+
+        }
+
+        .show-tag {
+            opacity: 1;
+            transition: all .75s;
+            background-color: rgba(226, 209, 255, .6);
+        }
+    }
+
+    .detail-bgc {
+        position: absolute;
+        background-color: rgba(226, 209, 255, .35);
+        transition: all .1s;
+        // transform: translateY(41px);
+    }
+
+    // .translateY1{
+    //     transform: translateY(41px);
+    // }
+    // .translateY2{
+    //     transform: translateY(82px);
+    // }
+    // .translateY3{
+    //     transform: translateY(123px);
+    // }
+    // .translateY1{
+    //     transform: translateY(41px);
+    // }
+    // width: 35px;
+    // height: 35px;
+    // }
+}
+
+.show-nav {
+    // display: block;
+    opacity: 1;
+}

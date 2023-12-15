@@ -1,0 +1,204 @@
+.preBtn {
+  position: fixed;
+  left: 27px;
+  top: 27px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/pre-btn\ \(1\).png);
+  border-radius: 50px;
+  background-size: 70%;
+  background-position: center;
+  background-color: #eddfff;
+  transition: all 0.2s;
+}
+.preBtn:hover {
+  background-color: #ddc8f8;
+}
+.test-plate {
+  background-image: url(../images/test-intro-bgi.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.test-plate video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.test-plate .test-plate-wrap {
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  height: 100vh;
+  margin: auto;
+}
+.test-plate .test-plate-wrap .title {
+  font-size: 26px;
+  line-height: 28.8px;
+  font-weight: 500;
+  margin-bottom: 78px;
+}
+.test-plate .test-plate-wrap .test-item {
+  width: 100%;
+  padding: 0 38px;
+}
+.test-plate .test-plate-wrap .test-item .test-contain {
+  display: flex;
+  justify-content: space-between;
+}
+.test-plate .test-plate-wrap .test-item .crollBox {
+  position: relative;
+}
+.test-plate .test-plate-wrap .test-item .card {
+  height: 343px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.test-plate .test-plate-wrap .test-item img {
+  height: 271px;
+  width: 239px;
+  background-color: salmon;
+  position: absolute;
+  top: -41px;
+  left: 13px;
+  border-radius: 6px;
+  z-index: 1;
+  transition-duration: 0.2s;
+  border-radius: 18px;
+}
+.test-plate .test-plate-wrap .test-item .hoverArea {
+  width: 266px;
+  height: 341px;
+  background-color: khaki;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 6px 12px -3px #0003, 0 7px 14px -7px #0003;
+}
+.test-plate .test-plate-wrap .test-item video {
+  width: 239px;
+  height: 138px;
+  position: absolute;
+  left: 13px;
+  top: -41px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: gold;
+}
+.test-plate .test-plate-wrap .test-item .card_info {
+  background-color: #fff;
+  position: relative;
+  top: 230px;
+  transition-duration: 0.2s;
+  z-index: 1;
+}
+.test-plate .test-plate-wrap .test-item .above {
+  padding: 9px 16px 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.test-plate .test-plate-wrap .test-item .above .tit {
+  color: #7a65ad;
+  font-size: 26px;
+  line-height: 48px;
+  font-weight: 700;
+}
+.test-plate .test-plate-wrap .test-item .tit-intro {
+  color: #999999;
+  font-size: 16px;
+  line-height: 28px;
+  height: 56px;
+}
+.test-plate .test-plate-wrap .test-item .enter-test {
+  margin-top: 14px;
+  width: 100%;
+  font-size: 12px;
+  color: #000;
+}
+.test-plate .test-plate-wrap .test-item .enter-btn {
+  width: 149px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  margin: auto;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #937be8;
+  box-shadow: 0 3px 8px -1px #0003;
+}
+.test-plate .test-plate-wrap .test-item .enter-btn:hover {
+  background-color: rgba(147, 123, 232, 0.75);
+}
+.test-plate .test-plate-wrap .hoverArea {
+  transition: all 0.2s ease-in-out;
+}
+.test-plate .test-plate-wrap .hoverArea:hover .card_info {
+  transform: translateY(-135px);
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.2s;
+}
+.test-plate .test-plate-wrap .hoverArea:hover video {
+  display: block;
+  z-index: 2;
+}
+.test-plate .test-plate-wrap .hoverArea:hover img {
+  display: none;
+}
+.test-plate .test-plate-wrap .hoverArea:hover .crollBox .card {
+  box-shadow: 0 6px 12px -3px #0003, 0 7px 14px -7px #0003;
+}
+.test-plate .test-plate-wrap .hoverArea:hover .tit-intro {
+  display: none;
+}
+.test-plate .test-plate-wrap .hoverArea:hover {
+  box-shadow: 0 6px 12px -3px #0003, 0 26px 14px -7px #0003;
+}
+.test-plate .test-plate-wrap .tags {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.test-plate .test-plate-wrap .tags .tag-wrap {
+  width: 34%;
+  height: 100%;
+}
+.test-plate .test-plate-wrap .tags .tag-wrap:hover .tag {
+  transition: all, 0.2s;
+  background-color: rgba(147, 123, 232, 0.75);
+  color: #fff;
+}
+.test-plate .test-plate-wrap .tags .tag-wrap:hover .tag .detail {
+  display: block;
+}
+.test-plate .test-plate-wrap .tag {
+  width: 70px;
+  height: 26px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  color: #937be8;
+  background-color: #e8dcfc;
+}
+.test-plate .test-plate-wrap .detail,
+.test-plate .test-plate-wrap .intro {
+  width: 221px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #999999;
+  overflow: hidden;
+  margin-top: 12px;
+}
+.test-plate .test-plate-wrap .detail {
+  display: none;
+  width: 221px;
+  position: absolute;
+  left: 16px;
+  bottom: 87px;
+  text-align: left;
+  background-color: #fff;
+}

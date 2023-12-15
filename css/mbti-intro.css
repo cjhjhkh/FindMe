@@ -1,0 +1,6 @@
+.mbti-contain {
+  height: 100vh;
+  background-image: url(../切片/MBTI视频.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

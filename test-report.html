@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test-report</title>
+    <link rel="stylesheet" href="./css/test-report.css">
+    <!-- <script src="./javascript/header.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+    <script src="./javascript/mbti-bridge.js"></script>
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrap">
+
+    <!-- 测试结果 -->
+
+    <div class="report-contain contain">
+        <!-- 返回按钮 -->
+        <a href="./test-plant.html">
+            <div class="preBtn"></div>
+        </a>
+        <a href="#">
+            <div class="report-go-back"></div>
+        </a>
+        <div class="mbti-tit-bgi"></div>
+        <!-- 结果 -->
+        <div class="conclusion">
+            <div class="wrap">
+                <div class="report-box">
+                    <div class="dimensions">
+                        <div class="dimension">
+                            <div class="dimen-tit">内向(Introverted)</div>
+                            <div class="desc">喜欢单独活动，在社会交往中会感到疲惫。一般来说，他们对外界刺激(如声音、视觉或嗅觉)相当敏感</div>
+                        </div>
+                        <div class="dimension">
+                            <div class="dimen-tit">思考(Thinking)</div>
+                            <div class="desc">注重客观和理hhhhhhhhhhhhhhhhhh性，优先考虑逻辑而非情感。他们倾向于隐藏自己的感受，认为效率比合作更重要</div>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <div class="mbti">
+                            <div class="e-i-letter letter">I</div>
+                            <div class="s-n-letter letter">S</div>
+                            <div class="t-f-letter letter">T</div>
+                            <div class="j-p-letter letter">J</div>
+                        </div>
+                        <div class="name">物 流 师</div>
+                        <div class="describe">实际而注重事实的现实主义者</div>
+                        <div class="percentage-box">
+                            <div class="e-i">
+                                <div class="e-per per">
+                                    <div class="text">外向(E)</div>
+                                </div>
+                                <div class="show">
+                                    <div class="progress-bar right">
+                                        <div class="block"></div>
+                                    </div>
+                                </div>
+                                <div class="i-per per">
+                                    <div class="text">内向(I)</div>
+                                </div>
+                            </div>
+                            <div class="s-n">
+                                <div class="s-per per">
+                                    <div class="text">感觉(S)</div>
+                                </div>
+                                <div class="show">
+                                    <div class="progress-bar right">
+                                        <div class="block"></div>
+                                    </div>
+                                </div>
+                                <div class="n-per per">
+                                    <div class="text">直觉(N)</div>
+                                </div>
+                            </div>
+                            <div class="t-f">
+                                <div class="t-per per">
+                                    <div class="text">思考(T)</div>
+                                </div>
+                                <div class="show">
+                                    <div class="progress-bar right">
+                                        <div class="block"></div>
+                                    </div>
+                                </div>
+                                <div class="f-per per">
+                                    <div class="text">情感(F)</div>
+                                </div>
+                            </div>
+                            <div class="j-p">
+                                <div class="j-per per">
+                                    <div class="text">判断(J)</div>
+                                </div>
+                                <div class="show">
+                                    <div class="progress-bar right">
+                                        <div class="block"></div>
+                                    </div>
+                                </div>
+                                <div class="p-per per">
+                                    <div class="text">知觉(P)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dimensions">
+                        <div class="dimension">
+                            <div class="dimen-tit">实感(Sensing)</div>
+                            <div class="desc">洞察力强，高度务实、脚踏实地。他们往往有强烈的习惯，专注于正在发生或已经发生的事情</div>
+                        </div>
+                        <div class="dimension">
+                            <div class="dimen-tit">判断(udging)</div>
+                            <div class="desc">果断的彻底的和高度组织。他们重视清晰、可预测性和封闭性，更喜欢结构和计划而不是自发性</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 基础分析 -->
+        <div class="analyse">
+            <div class="wrap">
+                <div class="report-box">
+                    <div class="report-title">基础分析</div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;ISTJ们安静、严肃勤奋且有责任心他们具有很强的集中力、条理性和准确性，对于细节有很强的记忆和判断;ISTJ型的人总是很传统、保守，他们聆听和喜欢确实、清晰地陈述事物，他们重视必要的理论体系和传统惯例，对于那些不是如此做事的人则很不耐烦
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 优缺点 -->
+        <div class="trait">
+            <div class="wrap">
+                <div class="report-box">
+                    <div class="trait-cont adv">
+                        <div class="tit">优 点</div>
+                        <ul class="trait-ul">
+                            <li class="trait-item">(1) 内敛稳重</li>
+                            <li class="trait-item">(2) 理性、注重细节</li>
+                            <li class="trait-item">(3) 实事求是脚踏实地</li>
+                            <li class="trait-item">(4) 尽忠职守</li>
+                        </ul>
+                    </div>
+                    <div class="trait-cont disadv">
+                        <div class="tit">缺 点</div>
+                        <ul class="trait-ul">
+                            <li class="trait-item">(1) 过于保守不会变通</li>
+                            <li class="trait-item">(2) 不会处理感情问题</li>
+                            <li class="trait-item">(3) 过于求稳安于现状</li>
+                            <li class="trait-item">(4) 单纯、易被人利用</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 推荐职业 -->
+        <div class="calling">
+            <div class="wrap">
+                <div class="report-box">
+                    <div class="relate">
+                        <div class="tit">适 合 职 业</div>
+                        <ul class="calling-list">
+                            <li class="calling-item">(1) 财务分析师</li>
+                            <li class="calling-item">(2)律师</li>
+                            <li class="calling-item">(3)医生</li>
+                            <li class="calling-item">(4)审计师</li>
+                            <li class="calling-item">(5)银行家</li>
+                        </ul>
+                    </div>
+                    <div class="relate">
+                        <div class="tit">对 应 专 业</div>
+                        <ul class="calling-list">
+                            <li class="calling-item">专科: 大数据与会计、大数据与财务管理、工商企业管理</li>
+                            <li class="calling-item">本科: 会计学、财务管理法律、临床医学、行政管理、工商管理</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 推荐电影书单歌单 -->
+        <div class="recommendation">
+            <div class="wrap">
+                <div class="report-box">
+                    <div class="recs">
+                        <div class="book rec">
+                            <div class="tit">书单推荐</div>
+                            <ul class="rec-list">
+                                <li class="rec-item">《德米安》</li>
+                                <li class="rec-item">《乡土中国》</li>
+                                <li class="rec-item">《生死疲劳》</li>
+                                <li class="rec-item">《谁动了我的奶酪》</li>
+                            </ul>
+                        </div>
+                        <div class="music rec">
+                            <div class="tit">歌单推荐</div>
+                            <ul class="rec-list">
+                                <li class="rec-item">《德米安》</li>
+                                <li class="rec-item">《乡土中国》</li>
+                                <li class="rec-item">《生死疲劳》</li>
+                                <li class="rec-item">《谁动了我的奶酪》</li>
+                            </ul>
+                        </div>
+                        <div class="movie rec">
+                            <div class="tit">电影推荐</div>
+                            <ul class="rec-list">
+                                <li class="rec-item">《德米安》</li>
+                                <li class="rec-item">《乡土中国》</li>
+                                <li class="rec-item">《生死疲劳》</li>
+                                <li class="rec-item">《谁动了我的奶酪》</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="save">保存报告</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+
+</html>

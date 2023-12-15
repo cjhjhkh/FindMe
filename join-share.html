@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join-share</title>
+    <link rel="stylesheet" href="./css/share.css">
+    <script src="./javascript/join-share.js"></script>
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+    <script src="./javascript/join-speak.js"></script>
+</head>
+
+<body>
+    <div class="join-share">
+
+        <!-- 答案揭晓 -->
+        <div class="keyword-answer-wrap">
+            <div class="keyword-answer-box">
+                <div class="close-btn"></div>
+
+                <div class="tip-text">揭晓时间</div>
+
+                <div class="keyword-box-wrap">
+                    <div class="character-keyword-box">
+                        <div class="tit">性格关键词</div>
+                        <div class="character-keyword">
+                            <!-- <canvas id="k1" width="364px" height="106px"></canvas> -->
+                            <div class="key-word">
+                                乐观
+                            </div>
+                            <div class="key-word">
+                                积极
+                            </div>
+                            <div class="key-word">
+                                开朗
+                            </div>
+                            <div class="key-word">
+                                温柔
+                            </div>
+                            <div class="key-word">
+                                温柔
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-keyword-box">
+                        <div class="tit">职业关键词</div>
+                        <div class="job-keyword">
+                            <!-- <canvas id="k2" width="364px" height="106px"></canvas> -->
+                            <div class="key-word">
+                                乐观
+                            </div>
+                            <div class="key-word">
+                                积极
+                            </div>
+                            <div class="key-word">
+                                开朗
+                            </div>
+                            <div class="key-word">
+                                温柔
+                            </div>
+                            <div class="key-word">
+                                温柔
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="next-step">
+                    <div class="next-sel">继续交流</div>
+                    <div class="next-sel">交换身份</div>
+                    <a href="./drawing-plate.html"><div class="next-sel">退出房间</div></a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="join-share-wrap">
+            <div class="join-share-contain">
+                <a href="./drawing-plate.html">
+                    <div class="pre-btn"></div>
+                </a>
+                <div class="left">
+                    <div class="drawing-board">
+
+                        <div class="tip-box">
+                            <div class="tips">
+                                <div class="tip tip1 active0">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="tip tip2">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="tip tip3">
+                                    <div class="icon"></div>
+                                </div>
+                            </div>
+                            <div class="tip-text">请 画 出 T A 的 画 像</div>
+                        </div>
+                        <div class="next show"></div>
+                        <div class="pre"></div>
+                        <div class="finish">完成</div>
+                        <div class="tool clear"></div>
+                        <div class="tool save"></div>
+                        <div class="tool-box">
+                            <div class="tools">
+                                <div class="tools-btn draw-tool color-tool">
+                                    <div class="tool-item">
+                                        <input type="color" class="color">
+                                        <div class="show-color"></div>
+                                    </div>
+                                </div>
+                                <div class="tool pen"></div>
+                                <div class="sel">
+                                    <div class="thick thick1"></div>
+                                    <div class="thick thick2"></div>
+                                    <div class="thick thick3"></div>
+                                </div>
+                                <div class="tool eraser"></div>
+                            </div>
+                            <div class="spread"></div>
+                        </div>
+                        <canvas id="c1" width="640px" height="392px" class="canvas show5"></canvas>
+                        <canvas id="c2" width="640px" height="392px" class="canvas"></canvas>
+                        <canvas id="c3" width="640px" height="392px" class="canvas"></canvas>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="bgc">
+                        <div class="mian-word">
+                            <div class="more">+</div>
+                        </div>
+                        <div class="edit-box">
+                            <input class="edit" type="text" placeholder="Key words"><button></button>
+                            <div class="tip-icon"></div>
+                        </div>
+                        <div class="dialogue-area">
+                            <div class="dialogue-box">
+                                <ul class="dialogue-cont">
+                                    <!-- <li class="msg self">
+                                        <div class="time">2023-10-03 22:26:13</div>
+                                        <div class="msg-box">
+                                            <div class="cont">dgsdgsfhsfhshsfg</div>
+                                            <div class="profile"></div>
+                                        </div>
+                                    </li>
+                                    <li class="msg other-one">
+                                        <div class="time">2023-10-03 22:26:13</div>
+                                        <div class="msg-box">
+                                            <div class="profile"></div>
+                                            <div class="cont">hhhhh</div>
+                                        </div>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emoji-tools">
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                    </div>
+                    <div class="send-box">
+                        <button class="speak"></button><input type="text" class="dialogue-input"
+                            placeholder="Message..."><button class="send"></button>
+                        <div class="emoj"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const canvasW = document.getElementById('c1');
+        canvasW.style.width = window.innerWidth*0.5 + 'px';
+        canvasW.style.height = window.innerHeight*0.7 + 'px';
+
+    </script>
+</body>
+
+</html>

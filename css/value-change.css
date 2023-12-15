@@ -1,0 +1,187 @@
+.pre-btn {
+  position: fixed;
+  left: 27px;
+  top: 27px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/pre-btn\ \(1\).png);
+  border-radius: 50px;
+  background-size: 70%;
+  background-position: center;
+  background-color: #eddfff;
+  transition: all 0.2s;
+}
+.pre-btn:hover {
+  background-color: #ddc8f8;
+}
+.value-change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/test-intro-bgi.png);
+}
+.value-change .value-change-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.value-change .tip-desc {
+  display: none;
+  position: absolute;
+  left: 161px;
+  top: 166px;
+  width: 459px;
+  height: 130px;
+  font-size: 20px;
+  line-height: 42px;
+  text-align: center;
+  color: #5836a8;
+  letter-spacing: 4px;
+}
+.value-change .continue {
+  color: #fff;
+}
+.value-change .already-value {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 255px;
+  background-color: khaki;
+  background: linear-gradient(180deg, rgba(223, 210, 252, 0) 0%, #8875b9 100%);
+  border-top: 2px solid #ffffff;
+  text-align: center;
+}
+.value-change .already-value .asker {
+  position: absolute;
+  bottom: 100%;
+  right: 20%;
+  width: 289px;
+  height: 289px;
+  background-image: url(../images/asker.png);
+  background-size: contain;
+}
+.value-change .already-value .title {
+  width: 74px;
+  height: 100%;
+  border: 2px solid #ffffff;
+  box-shadow: inset 0px 0px 20px 1px #ffffff;
+  text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  writing-mode: vertical-lr;
+  word-spacing: 1px;
+  text-align: center;
+  line-height: 74px;
+}
+.value-change .already-value .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+}
+.value-change .already-value .value-box {
+  display: flex;
+  justify-content: space-between;
+  width: 1068px;
+  height: 48px;
+}
+.value-change .already-value .sel-value {
+  width: 163px;
+  height: 48px;
+  border-radius: 8px;
+  line-height: 48px;
+  background: #b69fe7;
+  border: 1px solid #ffffff;
+  box-shadow: inset 2px 3px 16px 4px rgba(255, 255, 255, 0.66);
+  text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.25);
+  /** 文本 */
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+.value-change .already-value .change-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 105px;
+  width: 1068px;
+}
+.value-change .already-value .drop-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 258px;
+  height: 105px;
+  line-height: 34px;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(223, 210, 252, 0) 0%, #8875b9 100%);
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  box-shadow: inset 0px 0px 16px 7px #e7dbff;
+  /*文本*/
+  text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  letter-spacing: 8px;
+}
+.value-change .already-value .exchange-btn {
+  width: 207px;
+  height: 53px;
+  background-color: wheat;
+  border-radius: 8px;
+  line-height: 53px;
+  margin: 0 25px;
+  text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  background: #865ed6;
+  border: 1px solid #ffffff;
+  box-shadow: inset 0px 1px 20px 3px #ffffff;
+}
+.value-change .already-value .next-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 225px;
+  height: 60px;
+  border-radius: 8px;
+  background-color: saddlebrown;
+  line-height: 54px;
+  text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.25);
+  font-size: 28px;
+  background: #865ed6;
+  border: 4px solid #ffffff;
+  box-shadow: inset 0px 1px 20px 3px #ffffff;
+}
+.value-change .swap-value {
+  opacity: 0;
+  transition: all 0.35s;
+  display: none;
+  position: absolute;
+  left: 118px;
+  top: 106px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 525px;
+  height: 180px;
+}
+.value-change .swap-value .sel-value {
+  width: 163px;
+  height: 48px;
+  border-radius: 8px;
+  line-height: 48px;
+  background: #b69fe7;
+  border: 1px solid #ffffff;
+  box-shadow: inset 2px 3px 16px 4px rgba(255, 255, 255, 0.66);
+  text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+.value-change .cont-active {
+  display: block;
+}
+.value-change .cli-continue {
+  display: flex;
+}

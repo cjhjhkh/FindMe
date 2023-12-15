@@ -1,0 +1,133 @@
+//out:../css/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*返回按钮*/
+.preBtn {
+    position: fixed;
+    left: 27px;
+    top: 27px;
+    width: 40px;
+    height: 40px;
+    // background-color: salmon;
+    background-image: url(../images/pre-btn\ \(1\).png);
+    border-radius: 50px;
+    background-size: 70%;
+    background-position: center;
+    background-color: #eddfff;
+    transition: all .2s;
+    &:hover{
+        background-color: #ddc8f8;
+    }
+}
+.test2-report {
+    background-image: url(../images/test-bgi.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100Vh;
+
+    .report-wrap {
+        position: relative;
+        width: 520px;
+        height: 550px;
+        margin: auto;
+        padding-top: 55px;
+    }
+}
+
+.desc {
+    color: #fff;
+    font-size: 24px;
+    // width: 470px;
+    // height: 70px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.value-box {
+    margin: auto;
+    width: 259px;
+    height: 82px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 48px;
+    line-height: 60px;
+    color: #fff;
+}
+
+.detail-desc {
+    position: absolute;
+    top: 215px;
+    width: 337px;
+    height: 326px;
+    font-size: 20px;
+    // background-color: sandybrown;
+    border-radius: 36px;
+    padding: 84px 30.5px 0;
+    transform-origin: right top;
+    transition: all .35s linear;
+
+    .tit {
+        position: absolute;
+        // top: 54px;
+        top: 32px;
+        left: 0;
+        width: 121px;
+        height: 32px;
+        line-height: 32px;
+        background-color: rgba(181, 145, 235, 1);
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .descb {
+        font-size: 18px;
+        line-height: 22px;
+        width: 100%;
+        color: rgba(148, 148, 148, 1);
+        height: 220px;
+        // background-color: khaki;
+        // overflow: hidden;
+        // white-space: nowrap;
+        // text-overflow: ellipsis;
+        // -webkit-line-clamp: 3;/*设置行的值*/
+        overflow: hidden;
+// text-overflow: ellipsis;
+// display: -webkit-box;
+// -webkit-line-clamp: 3;
+// -webkit-box-orient: vertical;
+    }
+
+
+
+    &:nth-child(3) {
+        left: -316px;
+        // background-color: salmon;
+        background-image: linear-gradient(to top left,rgba(228, 199, 252, 1),rgba(191, 217, 255, 1));
+    }
+
+    &:nth-child(4) {
+        left: -45px;
+        background-image: linear-gradient(to top left,rgba(195, 248, 243, 1),rgba(255, 255, 193, 1));
+    }
+
+    &:nth-child(5) {
+        left: 226px;
+        background-image: linear-gradient(to top left,rgba(255, 249, 199, 1),rgba(255, 225, 196, 1));
+    }
+
+    &:nth-child(6) {
+        left: 497px;
+        background-image: linear-gradient(to top left,rgba(196, 233, 255, 1),rgba(247, 215, 252, 1));
+    }
+
+    &:hover {
+        transform: translateX(-20px) rotate(6deg);
+        transition: all .35s linear;
+    }
+}

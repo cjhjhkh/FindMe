@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+    <style>
+        /* img{
+            width: 130px;
+            height: 30px;
+            border-radius : 50%;
+            background-color: saddlebrown;
+        } */
+    </style>
+</head>
+
+<body>
+    <button class="btn"></button>
+    <script>
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNzAyNjUzODIwfQ.50xv0SxjVAS1PdVizxTq9DF6tB8qsmwZOD7chQt1NlI'
+
+        const btn = document.querySelector('.btn');
+        // 完善用户信息
+        // let username;
+        // let mbti;
+        // let job;
+        // let interestMbti;
+        // let interest;
+        // let recommend;
+
+
+        //1.查询用户（可）
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/user/1'
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+        // let job = 'job';
+        // let interest_mbti = 'enfp';
+        // let username = '1';
+        // let mbti = 'enfp';
+        // let interest = 'hhh';
+        // let signature = '11';
+        // // //2.完善 用户信息(可)
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'PUT',
+        //         url: 'http://8.134.176.185:8866/user',
+        //         headers: {
+        //             'Content-Type':'application/json',
+        //             'token':`${token}`
+        //         },
+        //         data: {
+        //            username,
+        //            mbti,
+        //            job,
+        //            interest_mbti,
+        //            interest,
+        //            signature
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        // 3.上传头像（可）
+        // let user_id = 1;
+        // let avatar = '5ZOI5ZOI';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/upload-avatar',
+        //         data:{
+        //             user_id,
+        //             avatar
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+
+
+
+
+        // //     // 4.匹配度表格（可）
+        //     let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/extract/3',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             "text": "职业规划是每个人都应该重视的事情，它关乎我们的未来和生活。下面是一篇关于职业规划的文章：  标题：明确目标，精心规划——走向职业成功之路 在当今这个快速变化的社会，职业规划已经成为了我们生活中不可或缺的一部分。无论你是刚刚步入职场的新人，还是已经在职场摸爬滚打多年的老手，都需要有一个清晰而实际的职业规划，以引导你在职业发展的道路上稳步前行。 首先，我们需要明确自己的职业目标。目标是指南针，它能够帮助我们确定方向，让我们知道自己应该朝哪个方向努力。你的目标可以是长期的，比如你希望在10年后成为公司的高级管理人员；也可以是短期的，比如你希望在接下来的一年里提升自己的技能水平。无论目标是什么，关键是要清晰、具体，并且符合你的实际情况。 其次，我们需要制定详细的行动计划。有了目标之后，就需要考虑如何实现这个目标。你需要确定哪些步骤是必要的，哪些资源是可利用的，以及如何有效地管理自己的时间和精力。在制定计划的过程中，你可能需要寻求他人的建议，比如你的导师、同事或者职业规划顾问。 然后，我们需要持续地评估和调整我们的职业规划。职业规划不是一次性的事情，而是一个持续的过程。随着时间的推移，我们的情况会发生变化，我们的目标也可能需要调整。因此，我们应该定期评估自己的进度，看看是否还在正确的道路上，如果有必要，就要及时调整我们的计划。 最后，我们需要有决心和毅力来实现我们的职业规划。职业发展的道路充满了挑战和困难，我们需要有坚定的决心和不屈的毅力，才能够克服这些挑战，实现我们的目标。总的来说，职业规划是一个系统的过程，需要我们明确目标，制定计划，持续评估和调整，并且有决心和毅力来实现我们的目标。只有这样，我们才能在职业发展的道路上走得更远，实现自己的职业理想。"
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+
+
+        // // 5.聊天记录
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/chat',
+        //         headers: {
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+
+
+
+        // //发送电波（可）
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/wave/send/1',
+        //         headers: {
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+        //接受电波(可)（data:null)
+        //     let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/wave/accept/11',
+        //         headers: {
+        //             'Content-Type':'application/json',
+        //             'token':`${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        //聊天记录(可)
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/chat',
+        //         data:{
+        //             "toId": 1
+        //         },
+        //         headers: {
+        //             'Content-Type':'application/json',
+        //             'token':`${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        // //获取好友列表（可)
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/wave/query/friends',
+        //         headers: {
+        //             'Content-Type':'application/json',
+        //             'token':`${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+        // 获取等待列表(可)
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/wave/query/wait',
+        //         headers: {
+        //             'Content-Type':'application/json',
+        //             'token':`${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        // //原地刷新(可)
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/match/1',
+        //         headers: {
+        //             'Content-Type':'application/json',
+        //             'token':`${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+        //hld测试接口
+        //         let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/hld/40',
+        //         headers: {
+        //             'Content-Type':'application/json',
+        //             'token':`${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+        //hld测试结果
+        //         let answer =[
+        // 1,
+        // 12,
+        // 23,
+        // 44,
+        // 56,
+        // 60
+        // ]
+        //         btn.addEventListener('click', () => {
+        //             axios({
+        //                 method: 'POST',
+        //                 url: 'http://8.134.176.185:8866/hld/report',
+        //                 headers: {
+        //                     'Content-Type':'application/json',
+        //                     'token':`${token}`
+        //                 },
+        //                 data: {
+        //                     answer
+        //                 }
+        //             }).then(result => {
+        //                 console.log(result);
+        //                 alert(111);
+        //             }).catch(error => {
+        //                 console.log(error);
+        //             })
+        //         })
+
+        //disc测试
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/disc',
+        //         headers: {
+        //             'Content-Type':'application/json',
+        //             'token':`${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        //disc结果
+
+        //         let answer =
+        // {
+        // 1:"D",
+        // 2: "B",
+        // 3: "D",
+        // 4: "C",
+        // 5: "D",
+        // 6: "B",
+        // 7: "D",
+        // 8: "A",
+        // 9: "C",
+        // 10: "A"
+        // }
+
+        //         btn.addEventListener('click', () => {
+        //             axios({
+        //                 method: 'POST',
+        //                 url: 'http://8.134.176.185:8866/disc/report',
+        //                 headers: {
+        //                     'Content-Type':'application/json',
+        //                     'token':`${token}`
+        //                 },
+        //                 data:
+        //                     answer
+        //             }).then(result => {
+        //                 console.log(result);
+        //                 alert(111);
+        //             }).catch(error => {
+        //                 console.log(error);
+        //             })
+        //         })
+
+
+
+
+
+
+
+
+
+
+
+        // // 5.匹配(可)
+        // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        // let MBTI = ['INTP','INFP','ENFJ'];
+        // // let MBTI = ['enfp','infp','estj'];
+        // let status = ['1'];
+        // btn.addEventListener('click', () => {
+
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/match',
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+
+
+        //         axios({
+        //             method: 'POST',
+        //             url: 'http://8.134.176.185:8866/match',
+        //             data: {
+        //                 MBTI,
+        //                 status
+        //             },
+        //             headers:{
+        //                 'token': token
+        //             }
+        //         }).then(result => {
+        //             console.log(result);
+        //             alert(111);
+        //         }).catch(error => {
+        //             console.log(error);
+        //         })
+
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+
+
+        // })
+
+        //清除缓存（写在发送电波之前）
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/match/match',
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+
+
+
+
+
+
+
+        // // mbti测试结果
+        //             // let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        //         btn.addEventListener('click', () => {
+        //             axios({
+        //                 method: 'POST',
+        //                 url: 'http://8.134.176.185:8866/mbti',
+        //                 headers: {
+        //                     jsonStr
+        //                 }
+        //             }).then(result => {
+        //                 console.log(result);
+        //                 alert(111);
+        //             }).catch(error => {
+        //                 console.log(error);
+        //             })
+        //         })
+
+        // let map ={
+        //     1:'a',
+        //     2:'b',
+        // }
+        // let jsonStr = JSON.stringify(map);//对象转换为JSON格式的字符串
+        //     let token = 'eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwiZXhwIjoxNzAyODIyMjQzfQ.sUeuUiA3qBornB_pDW9DJPhahMKeP6pyTFtfuXpGI_Y';
+        //     //上传结果
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/mbti',
+        //         data: {
+        //             jsonStr
+        //         },
+        //         headers:{
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(1);
+        //     })
+
+
+
+
+
+
+
+
+
+        //     let mbti = 'enfp';
+        //     btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/mbti/report/'+ mbti,
+        //     }).then(result => {
+        //         let data = result.data.data;
+        //         const {advantage,analysis,bookList,briefIntroduction,careerReference,disadvantage,eitypeIntroduction,jptypeIntroduction,mbtiName,movieListy,postSecondaryProgram,sntypeIntroduction,songList,tftypeIntroduction,undergraduateProgra} = data;
+        //         console.log(analysis);
+        //     })
+        // })
+
+
+
+
+
+
+
+
+
+
+        //             //获取验证码
+        //     // const getCode = () => {
+        //     //     const account = phone1.value;
+        //     //     const password = password1.value;
+        //     //     axios({
+        //     //         method: 'GET',
+        //     //         url: 'http://8.134.176.185:8866/api/identifyImage',
+        //     //         data: {
+        //     //             account,
+        //     //             password
+        //     //         }
+        //     //     }).then(result => {
+        //     //         getCodeBtn.src = result.data.data.img;
+        //     //         // alert(111);
+        //     //     }).catch(error => {
+        //     //         console.log(error);
+        //     //     })
+        //     // }
+
+
+
+
+
+        //邀请码
+        // http://localhost:8080/room/create
+
+        // localhost:8080/room/inRoom
+        // get  put
+        // let stage = 1;
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/forum/post',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             "title": "aaa",
+        //             "words": "test",
+        //             "labelsList": [
+        //                 "111",
+        //                 "222",
+        //                 "333"
+        //                 ],
+        //             "visibleScope": 1,
+        //             "createTime": "2023-11-07T04:13Z"
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     })
+        // })
+
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/wave/query/friends',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         alert(1);
+        //         })
+        // })
+
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/match',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data:{
+        //             "status": [
+        //                 "1"
+        //                 ]
+        //         }
+        //     }).then(result => {
+        //         alert(1);
+        //         })
+        // })
+        // let valArr = [
+        //         "成长发展"
+        //         ,
+        //         "工作稳定"
+        //         ,
+        //         "工作环境"
+        //         ,
+        //         "组织氛围"
+        //         ,
+        //         "他人认可"
+        //         ,
+        //         "开拓创造"]
+        // btn.addEventListener('click', () => {
+        //                 //上传选择结果
+        //                 axios({
+        //                     method: 'POST',
+        //                     url: 'http://8.134.176.185:8866/explode/result',
+        //                     headers: {
+        //                         'Content-Type': 'application/json',
+        //                         'token': `${token}`
+        //                     },
+        //                     data: {
+        //                         "valuesList": valArr,
+        //                         "progress": "1"
+        //                     }
+        //                 }).then(result => {
+        //                     alert(1);
+        //                 })
+        // })
+        //         btn.addEventListener('click', () => {
+        //                         //上传选择结果
+        //                         axios({
+        //                             method: 'POST',
+        //                             url: 'http://8.134.176.185:8866/explode/result',
+        //                             headers: {
+        // "valuesList": [
+        // "工作环境",
+        // "名誉地位",
+        // "创造发明"
+        // ],
+        // "progress": "2"
+        // }
+        //                         }).then(result => {
+        //                             alert(1);
+        //                         })
+        //         })
+
+
+
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/room/set_guess/character',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             "words": [
+        //                 "乐观",
+        //                 "积极",
+        //                 "热情"
+        //             ],
+        //             "roomCode": [
+        //                 "8E7001"
+        //             ]
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     })
+        // })
+
+
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/explode/result',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             "valuesList": [
+        //                 "工作环境",
+        //                 "名誉地位",
+        //                 "创造发明"
+        //             ],
+        //             "progress": "2"
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     })
+        // })
+
+
+        // // invitationCode
+        // // :
+        // // "9470D0"
+        // // senderId
+        // // :
+        // // 5
+        // let InvitationCode = '13D847';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'PUT',
+        //         url: 'http://8.134.176.185:8866/room/in-room',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             InvitationCode
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        // let roomCode = ["8E7001"];
+        // // token = 'eyJhbGcioiJIUzI1NiJ9.eyJpZCI6MSwizXhwIjoxNzAyNjUzODIwfo50xvOSxjVAS1PdVizxTg9DF6tB8qsmwZOD7chot1N1I';
+        // // 设置关键词（可
+        // let words = ["乐观","积极","热情"];
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/room/set_guess',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             words,
+        //             roomCode
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+
+
+        // // //猜关键词
+
+        // let guess = ["乐观","积极","热情"];
+        // // let roomCode = ["5B78B3"];
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/room/check_guess',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             roomCode,
+        //             guess
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        //邮箱验证码
+        // let email = '3464325568@qq.com'
+
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8855/user/email',
+        //         data: {
+        //             "email": "2082589127@qq.com"
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(1);
+
+        //     })
+        // })
+
+
+        // //登录
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/user/login',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             words,
+        //             roomCode
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        //上传头像
+
+        btn.addEventListener('click', () => {
+            axios({
+                method: 'POST',
+                url: 'http://8.134.176.185:8866/avatar/upload',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'token': `${token}`
+                },
+                data: {
+                    "user_id": "1",
+                    "avatar": "data:image/png;base64,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"
+                }
+            }).then(result => {
+                console.log(result);
+                alert(111);
+            }).catch(error => {
+                console.log(error);
+            })
+        })
+
+
+
+        // let base64 = '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gAABAgQKCgiABZuiJAIECBAgQIBATwEBsKeusQkQIECAAAECBQUEwIJNURIBAgQIECBAoKeAANhT19gECBAgQIAAgYICAmDBpiiJAAECBAgQINBTQADsqWtsAgQIECBAgEBBAQGwYFOURIAAAQIECBDoKSAA9tQ1NgECBAgQIECgoIAAWLApSiJAgAABAgQI9BQ90iLOAAAH7UlEQVQQAHvqGpsAAQIECBAgUFBAACzYFCURIECAAAECBHoKCIA9dY1NgAABAgQIECgoIAAWbIqSCBAgQIAAAQI9BQTAnrrGJkCAAAECBAgUFBAACzZFSQQIECBAgACBngICYE9dYxMgQIAAAQIECgoIgAWboiQCBAgQIECAQE8BAbCnrrEJECBAgAABAgUFBMCCTVESAQIECBAgQKCngADYU9fYBAgQIECAAIGCAgJgwaYoiQABAgQIECDQU0AA7KlrbAIECBAgQIBAQQEBsGBTlESAAAECBAgQ6CkgAPbUNTYBAgQIECBAoKCAAFiwKUoiQIAAAQIECPQUEAB76hqbAAECBAgQIFBQQAAs2BQlESBAgAABAgR6CgiAPXWNTYAAAQIECBAoKCAAFmyKkggQIECAAAECPQUEwJ66xiZAgAABAgQIFBQQAAs2RUkECBAgQIAAgZ4CAmBPXWMTIECAAAECBAoKCIAFm6IkAgQIECBAgEBPAQGwp66xCRAgQIAAAQIFBQTAgk1REgECBAgQIECgp4AA2FPX2AQIECBAgACBggICYMGmKIkAAQIECBAg0FNAAOypa2wCBAgQIECAQEEBAbBgU5REgAABAgQIEOgpIAD21DU2AQIECBAgQKCggABYsClKIkCAAAECBAj0FBAAe+oamwABAgQIECBQUEAALNgUJREgQIAAAQIEegoIgD11jU2AAAECBAgQKCggABZsipIIECBAgAABAj0FBMCeusYmQIAAAQIECBQUEAALNkVJBAgQIECAAIGeAgJgT11jEyBAgAABAgQKCgiABZuiJAIECBAgQIBATwEBsKeusQkQIECAAAECBQUEwIJNURIBAgQIECBAoKeAANhT19gECBAgQIAAgYICAmDBpiiJAAECBAgQINBTQADsqWtsAgQIECBAgEBBAQGwYFOURIAAAQIECBDoKSAA9tQ1NgECBAgQIECgoIAAWLApSiJAgAABAgQI9BQQAHvqGpsAAQIECBAgUFBAACzYFCURIECAAAECBHoKCIA9dY1NgAABAgQIECgoIAAWbIqSCBAgQIAAAQI9BQTAnrrGJkCAAAECBAgUFBAACzZFSQQIECBAgACBngICYE9dYxMgQIAAAQIECgoIgAWboiQCBAgQIECAQE8BAbCnrrEJECBAgAABAgUFBMCCTVESAQIECBAgQKCngADYU9fYBAgQIECAAIGCAgJgwaYoiQABAgQIECDQU0AA7KlrbAIECBAgQIBAQQEBsGBTlESAAAECBAgQ6CkgAPbUNTYBAgQIECBAoKCAAFiwKUoiQIAAAQIECPQUEAB76hqbAAECBAgQIFBQQAAs2BQlESBAgAABAgR6CgiAPXWNTYAAAQIECBAoKCAAFmyKkggQIECAAAECPQUEwJ66xiZAgAABAgQIFBQQAAs2RUkECBAgQIAAgZ4CAmBPXWMTIECAAAECBAoKCIAFm6IkAgQIECBAgEBPAQGwp66xCRAgQIAAAQIFBQTAgk1REgECBAgQIECgp4AA2FPX2AQIECBAgACBggICYMGmKIkAAQIECBAg0FNAAOypa2wCBAgQIECAQEEBAbBgU5REgAABAgQIEOgpIAD21DU2AQIECBAgQKCggABYsClKIkCAAAECBAj0FBAAe+oamwABAgQIECBQUEAALNgUJREgQIAAAQIEegoIgD11jU2AAAECBAgQKCggABZsipIIECBAgAABAj0FBMCeusYmQIAAAQIECBQUEAALNkVJBAgQIECAAIGeAgJgT11jEyBAgAABAgQKCgiABZuiJAIECBAgQIBATwEBsKeusQkQIECAAAECBQUEwIJNURIBAgQIECBAoKeAANhT19gECBAgQIAAgYICAmDBpiiJAAECBAgQINBTQADsqWtsAgQIECBAgEBBAQGwYFOURIAAAQIECBDoKSAA9tQ1NgECBAgQIECgoIAAWLApSiJAgAABAgQI9BQQAHvqGpsAAQIECBAgUFBAACzYFCURIECAAAECBHoKCIA9dY1NgAABAgQIECgoIAAWbIqSCBAgQIAAAQI9BQTAnrrGJkCAAAECBAgUFBAACzZFSQQIECBAgACBngICYE9dYxMgQIAAAQIECgoIgAWboiQCBAgQIECAQE8BAbCnrrEJECBAgAABAgUFBMCCTVESAQIECBAgQKCngADYU9fYBAgQIECAAIGCAgJgwaYoiQABAgQIECDQU0AA7KlrbAIECBAgQIBAQQEBsGBTlESAAAECBAgQ6CkgAPbUNTYBAgQIECBAoKCAAFiwKUoiQIAAAQIECPQUEAB76hqbAAECBAgQIFBQQAAs2BQlESBAgAABAgR6CgiAPXWNTYAAAQIECBAoKCAAFmyKkggQIECAAAECPQUEwJ66xiZAgAABAgQIFBQQAAs2RUkECBAgQIAAgZ4CAmBPXWMTIECAAAECBAoKCIAFm6IkAgQIECBAgEBPAQGwp66xCRAgQIAAAQIFBQTAgk1REgECBAgQIECgp4AA2FPX2AQIECBAgACBggICYMGmKIkAAQIECBAg0FNAAOypa2wCBAgQIECAQEEBAbBgU5REgAABAgQIEOgpIAD21DU2AQIECBAgQKCggABYsClKIkCAAAECBAj0FBAAe+oamwABAgQIECBQUEAALNgUJREgQIAAAQIEegoIgD11jU2AAAECBAgQKCjw/wCUJIG2FAhqBQAAAABJRU5ErkJggg=='
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'PUT',
+        //         url: 'http://8.134.176.185:8866/room/save',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             "board": `${base64}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/cartoon',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/cartoon/add',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             "myName": "你好55",
+        //             "birth": "2023-11-13",
+        //             "ad": ["5555", "6666", "7777", "8888"],
+        //             "disAd": ["1111", "2222", "3333", "44444"],
+        //             "preMe": "现在的我图片",
+        //             "postMe": "未来的我图片",
+        //             "myJobList": [
+        //                 {
+        //                     "jobName": "职业名称5",
+        //                     "des": "职业简述1",
+        //                     "picture": "职业的图1",
+        //                     "isPost": 1
+        //                 },
+        //                 {
+        //                     "jobName": "职业名称5",
+        //                     "des": "职业简述2",
+        //                     "picture": "职业的图2",
+        //                     "isPost": 1
+        //                 },
+        //                 {
+        //                     "jobName": "职业名称5",
+        //                     "des": "职业简述3",
+        //                     "picture": "职业的图3",
+        //                     "isPost": 0
+        //                 }
+        //             ]
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+        // let occupationId = 1;
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'PUT',
+        //         url: 'http://8.134.176.185:8866/explode/plan',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             "task": "打游戏",
+        //             "startTime": "2023-11-15",
+        //             "endTime": "2023-12-15",
+        //             "stage": 1,
+        //             "desArray": [
+        //                 [
+        //                     "元素 0-0",
+        //                     "元素55",
+        //                     "元素 0-2",
+        //                     "元素 0-3",
+        //                     "元素 0-4"
+        //                 ],
+        //                 [
+        //                     "元素 1-0",
+        //                     "元素 1-1",
+        //                     "元素 1-2",
+        //                     "元素 1-3",
+        //                     "元素 1-4"
+        //                 ],
+        //                 [
+        //                     "元素 2-0",
+        //                     "元素 2-1",
+        //                     "元素 2-2",
+        //                     "元素 2-3",
+        //                     "元素 2-4"
+        //                 ],
+        //                 [
+        //                     "元素 3-0",
+        //                     "元素 3-1",
+        //                     "元素 3-2",
+        //                     "元素 3-3",
+        //                     "元素 3-4"
+        //                 ],
+        //                 [
+        //                     "元素 4-0",
+        //                     "元素 4-1",
+        //                     "元素 4-2",
+        //                     "元素 4-3",
+        //                     "元素 4-4"
+        //                 ]
+        //             ]
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // //修改可见范围（可
+        // let status = 1;
+
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'PATCH',
+        //         url: 'http://8.134.176.185:8866/forum/post/12?status=1',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: { "status": `${status}` }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+        // //删除帖子（可
+
+        // let postId = 13;
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'DELETE',
+        //         url: 'http://8.134.176.185:8866/forum/post/' + postId,
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        // // 点赞/取消点赞(可)
+        // let postId = 12;
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/forum/like/12' + postId,
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+        // // 收藏/取消收藏（可
+        // let postId = 12;
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/forum/collect/' + postId,
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+
+        // // 查看帖子详细信息(可)
+        // let postId = 12;
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/forum/post/details?postId='+postId,
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data:{
+        //             "postId": `${postId}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        // // 帖子关键词搜索(可)
+        // let keywords = '大学';
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/forum/search?keywords=' + keywords,
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             "keywords": `${keywords}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+        // // 预览帖子(可)
+        // let postId = 5;
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http:/8.134.176.185:8866/forum/post/' + postId,
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+        // // 获取用户收藏列表（可
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: 'http://8.134.176.185:8866/forum/collect',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+        // btn.addEventListener('click', () => {
+        //     let preMe = '11';
+        //     let postMe = '22';
+        //     // setTimeout(() => {
+        //     // console.log(preMe);
+        //     setTimeout(() => {
+        //         axios({
+        //             method: 'POST',
+        //             url: 'http://8.134.176.185:8866/cartoon/add',
+        //             headers: {
+        //                 'Content-Type': 'application/json',
+        //                 'token': `${token}`
+        //             },
+        //             data:
+        //             {
+        //                 "myName": "你好55",
+        //                 "birth": "2023-11-13",
+        //                 "ad": [
+        //                     "5555",
+        //                     "6666",
+        //                     "7777",
+        //                     "8888"
+        //                 ],
+        //                 "disAd": [
+        //                     "1111",
+        //                     "2222",
+        //                     "3333",
+        //                     "44444"
+        //                 ],
+        //                 "preMe": `data:image/png;base64,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`,
+        //                 "postMe": `${postMe}`,
+        //                 "area": "广东",
+        //                 "userJob": "计算机",
+        //                 "myJobList": [
+        //                     {
+        //                         "jobName": "职业名称5",
+        //                         "des": "职业简述1",
+        //                         "picture": "职业的图1",
+        //                         "isPost": 1
+        //                     },
+        //                     {
+        //                         "jobName": "职业名称5",
+        //                         "des": "职业简述2",
+        //                         "picture": "职业的图2",
+        //                         "isPost": 1
+        //                     },
+        //                     {
+        //                         "jobName": "职业名称5",
+        //                         "des": "职业简述3",
+        //                         "picture": "职业的图3",
+        //                         "isPost": 0
+        //                     }
+        //                 ]
+        //             }
+        //         }).then(result => {
+        //             console.log(result);
+        //             alert('上传数据');
+        //         })
+
+        //     }, 1000)
+
+
+
+
+        //     // }, 1000)
+
+        // })
+
+
+
+
+
+
+
+
+
+        // axios({
+        //     method: 'POST',
+        //     url: 'http://8.134.176.185:8866/cartoon/add',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'token': `${token}`
+        //     },
+        //     data:
+        //     {
+        //         "myName": '${myName.value.trim()}',
+        //         "birth": '${birth}',
+        //         "userJob": '${userJob.value.trim()}',
+        //         "area": '${area.value.trim()}',
+        //         "ad": ad,
+        //         "disAd": disad,
+        //         "preMe": '${preMe}',
+        //         "postMe": '${postMe}',
+        //         "myJobList": myJobList
+        //     }
+        // }).then(result => {
+        //     console.log(result);
+        //     alert('上传数据');
+        // })
+
+
+        // // 评论帖子(可)
+        // let postId = 5;
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'POST',
+        //         url: 'http://8.134.176.185:8866/forum/comment/' + postId,
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         },
+        //         data: {
+        //             "commentContent": "智齿111!!",
+        //             "parentCommentId": 4 //仅子级评论需要
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        // // 删除评论（可
+        // let postId = 5;
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'DELETE',
+        //         url: ' http://8.134.176.185:8866/forum/comment/' + postId,
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+
+        // 获取用户点赞列表（可
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: ' http://8.134.176.185:8866/forum/likes',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+
+
+        // // 获取用户帖子列表（可
+        // btn.addEventListener('click', () => {
+        //     axios({
+        //         method: 'GET',
+        //         url: ' http://8.134.176.185:8866/forum/published',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'token': `${token}`
+        //         }
+        //     }).then(result => {
+        //         console.log(result);
+        //         alert(111);
+        //     }).catch(error => {
+        //         console.log(error);
+        //     })
+        // })
+    </script>
+</body>
+
+</html>

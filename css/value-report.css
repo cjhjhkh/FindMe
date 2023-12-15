@@ -1,0 +1,125 @@
+.pre-btn {
+  position: fixed;
+  left: 27px;
+  top: 27px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/pre-btn\ \(1\).png);
+  border-radius: 50px;
+  background-size: 70%;
+  background-position: center;
+  background-color: #eddfff;
+  transition: all 0.2s;
+}
+.pre-btn:hover {
+  background-color: #ddc8f8;
+}
+.value-report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/test-intro-bgi.png);
+  background-size: contain;
+}
+.value-report-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  height: 430px;
+}
+.report-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 452px;
+  overflow: hidden;
+}
+.report-tit {
+  position: absolute;
+  z-index: 3;
+  width: 81%;
+  background-color: transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid #cab4fa;
+  border-right: 50px solid #cab4fa;
+}
+.report-tit::before,
+.report-tit::after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 31px;
+  height: 119px;
+  background: #cab4fa;
+}
+.report-tit::before {
+  left: -80px;
+}
+.report-tit::after {
+  right: -80px;
+}
+.report-tit .text {
+  height: 70px;
+  line-height: 70px;
+  font-size: 28px;
+  color: #7152b3;
+  text-align: center;
+  background-color: #cab4fa;
+}
+.report-card {
+  position: relative;
+  padding: 16px 21px 0px 16px;
+  width: 313px;
+  height: 360px;
+  background-color: #7152b3;
+  transform: translateY(-160px);
+  box-shadow: 6px 2px 9px rgba(0, 0, 0, 0.25);
+  transition: all 0.65s;
+}
+.report-card .desc1,
+.report-card .desc2 {
+  border-radius: 4px;
+  background: linear-gradient(180deg, #af98e1 0%, rgba(175, 152, 225, 0) 100%);
+  font-size: 14px;
+  color: #fff;
+  padding: 16px;
+  letter-spacing: 4px;
+  line-height: 24px;
+}
+.report-card .desc1 {
+  width: 282px;
+  height: 180px;
+}
+.report-card .desc2 {
+  width: 282px;
+  height: 125px;
+  margin-top: 8px;
+}
+.report-card::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 28px;
+  width: 282px;
+  height: 4px;
+  background-color: #cab4fa;
+}
+.report-card::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -21px;
+  content: '';
+  width: 36px;
+  height: 30px;
+  background-color: #5e3da6;
+}
+.active {
+  transition: all 0.65s;
+  transform: translateY(70px);
+}

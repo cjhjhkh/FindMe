@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>issue-plate</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/issue-plate.css">
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+    <script src="./javascript/issue-plate.js"></script>
+</head>
+
+<body>
+    <div class="issue-plate">
+        <!-- 返回按钮 -->
+        <a href="./communicat-area.html">
+            <div class="preBtn"></div>
+        </a>
+
+        <!-- <a href="./communicat-area.html">
+            <div class="pre-btn"></div>
+        </a> -->
+        <div class="boat"></div>
+        <div class="issue-plate-wrap">
+            <div class="issue-box content show">
+                <div class="tit-box">
+                    <input type="text" class="tit-input" placeholder="起个简短的标题吧!">
+                    <div class="total">0/10</div>
+                </div>
+                <div class="cont-box">
+                    <textarea cols="30" rows="10" class="cont-input" placeholder="展开说说..."></textarea>
+                    <div class="total">0/200</div>
+                </div>
+                <div class="continue btn">继&nbsp;&nbsp;&nbsp;续</div>
+            </div>
+            <div class="issue-box label">
+                <div class="tit">添加适当的标签</div>
+                <div class="tag-box al">
+                    <!-- <div class="tag-item">信息差</div> -->
+                    <!-- <div class="tag-item">坦白局挑战</div> -->
+                    <div class="add-tag"></div>
+
+                </div>
+                    <form class="addTag">
+                        <input class="add-label" placeholder="写个合适的标签吧~">
+                        <div class="confirm"></div>
+                    </form>
+                <div class="tit second">为您推荐</div>
+                <div class="tag-box">
+                    <div class="tag-item disCli">信息差</div>
+                    <div class="tag-item disCli">坦白局挑战</div>
+                    <div class="tag-item disCli">职场</div>
+                </div>
+                <div class="continue btn">继&nbsp;&nbsp;&nbsp;续</div>
+
+            </div>
+            <div class="issue-box limit">
+                <div class="tit">权限设置:</div>
+                <div class="check-wrap">
+                    <div class="checkBox"><input type="radio" name="check-limit" class="all">所有人可见</div>
+                    <div class="checkBox"><input type="radio" name="check-limit" class="self">仅自己可见</div>
+                </div>
+                <div class="tit second">发布时间:</div>
+                <div class="check-wrap">
+                    <div class="checkBox"><input type="radio" name="issue-time" class="now">立即发布</div>
+                    <div class="checkBox"><input type="radio" name="issue-time" class="setTime">定时发布</div>
+                </div>
+                <div class="continue btn">完&nbsp;&nbsp;&nbsp;成</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create-share</title>
+    <link rel="stylesheet" href="./css/share.css">
+    <script src="./javascript/create-share.js"></script>
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+    <!-- <script src="clipboard.js-2.0.11/clipboard.js-2.0.11/dist/clipboard.min.js"></script> -->
+    <!-- <script src="clipboard.js-2.0.11/clipboard.js-2.0.11/dist/clipboard.min.js"></script> -->
+    <script src="clipboard.js-2.0.11/clipboard.js-2.0.11/dist/clipboard.min.js"></script>
+    <script src="./javascript/creat-speak.js"></script>
+    <!-- <script src="./javascript/common-share.js"></script> -->
+</head>
+
+<body>
+    <!-- 邀请码 -->
+    <div class="invite-code-wrap">
+
+
+
+        <div class="invite-code-box">
+            <div class="close"></div>
+            <span class="tip">邀请码：&nbsp;&nbsp;&nbsp;</span><span class="code"></span>
+            <div class="copy-box">
+
+                <!-- 用于复制的输入区域 -->
+                <textarea name="copy" id="copy-container"></textarea>
+
+                <p class="copy-text">xx 邀请您加入好友飞船房间</p>
+                <p class="copy-text">来帮我绘制我的画像吧！   </p>
+                <div class="bgc-box">
+                    <p class="copy-text">点击链接直接加入房间：</p>
+                    <p class="copy-text">https://js.design/dm/OXEhHxIs1I0i    </p>
+                    <p class="copy-text invite-code">邀请码：6ZDSJ3    </p>
+                </div>
+                <p class="copy-text">复制该信息，打开网站即可参与!</p>
+            </div>
+            <div class="copy" data-clipboard-target="#copy-container">复 制 全 部 信 息    </div>
+        </div>
+    </div>
+
+
+    <!-- 答案揭晓 -->
+    <div class="keyword-answer-wrap">
+        <div class="keyword-answer-box">
+            <div class="close-btn"></div>
+
+            <div class="tip-text">揭晓时间</div>
+
+            <div class="keyword-box-wrap">
+                <div class="character-keyword-box">
+                    <div class="tit">性格关键词</div>
+                    <div class="character-keyword">
+                        <canvas id="k1" width="364px" height="106px"></canvas>
+                        <div class="key-word">
+                            乐观
+                        </div>
+                        <div class="key-word" style="background-color: #FF9C9C;">
+                            积极
+                        </div>
+                        <div class="key-word">
+                            开朗
+                        </div>
+                        <div class="key-word">
+                            温柔
+                        </div>
+                        <div class="key-word">
+                            温柔
+                        </div>
+                    </div>
+                </div>
+                <div class="job-keyword-box">
+                    <div class="tit">职业关键词</div>
+                    <div class="job-keyword">
+                        <canvas id="k2" width="364px" height="106px"></canvas>
+                        <div class="key-word">
+                            老师
+                        </div>
+                        <div class="key-word">
+                            护士
+                        </div>
+                        <div class="key-word">
+                            画家
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="show-all">一键揭晓</div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 主体部分 -->
+    <div class="create-share">
+            <div class="step-btn"></div>
+            <div class="create-share-wrap">
+
+            <div class="show-answer">揭晓答案</div>
+            <div class="create-share-contain">
+                <a href="./drawing-plate.html">
+                    <div class="pre-btn"></div>
+                </a>
+                <div class="invite">邀请</div>
+                <div class="left">
+                    <div class="drawing-board">
+                        <div class="tip-box">
+                            <div class="tips">
+                                <div class="tip tip1 active0">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="tip tip2">
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="tip tip3">
+                                    <div class="icon"></div>
+                                </div>
+                            </div>
+                            <div class="tip-text"></div>
+                        </div>
+                        
+                        <div class="next" style="display: none;"></div>
+                        <div class="pre" style="display: none;"></div>
+
+                        <!-- 工具栏 -->
+                        <div class="tool save"></div>
+                        <div class="tool-box">
+                            <div class="tools">
+                                <div class="tools-btn"></div>
+                                <div class="tool pen"></div>
+                                <div class="sel">
+                                    <div class="thick thick1"></div>
+                                    <div class="thick thick2"></div>
+                                    <div class="thick thick3"></div>
+                                </div>
+                                <input type="color" class="tool color">
+                                <div class="tool eraser"></div>
+                            </div>
+                            <div class="spread"></div>
+                        </div>
+                        <!-- <canvas id="c1" width="750px" height="590px" class="canvas show5"></canvas> -->
+                        <canvas id="c1" width="640px" height="392px" class="canvas show5"></canvas>
+                        <canvas id="c2" width="640px" height="392px" class="canvas"></canvas>
+                        <canvas id="c3" width="640px" height="392px" class="canvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="bgc">
+                        <div class="mian-word">
+                            <div class="more"></div>
+                        </div>
+                        <div class="edit-box">
+                            <input class="edit" type="text" placeholder="Key words"><button></button>
+                            <div class="tip-icon"></div>
+                        </div>
+                        <div class="dialogue-area">
+                            <div class="dialogue-box">
+                                <ul class="dialogue-cont"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="emoji-tools">
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                        <div class="tool-icon"></div>
+                    </div>
+                    <div class="send-box">
+                        <button class="speak"></button><input type="text" class="dialogue-input"
+                            placeholder="Message..."><button class="send"></button>
+                        <div class="emoj"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
+

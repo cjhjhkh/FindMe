@@ -1,0 +1,357 @@
+/*返回按钮*/
+.preBtn {
+  position: fixed;
+  left: 27px;
+  top: 27px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/pre-btn\ \(1\).png);
+  border-radius: 50px;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #eddfff;
+  transition: all 0.2s;
+}
+.issue-plate {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/issue-bgi.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.issue-plate input {
+  outline: none;
+}
+.issue-plate .issue-plate-wrap {
+  position: relative;
+  width: 1184px;
+  height: 561px;
+  overflow: hidden;
+}
+.issue-plate .issue-box {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 15px 20px;
+}
+.issue-plate .issue-box .tit {
+  font-size: 18px;
+  color: #ac95e8;
+  margin-bottom: 13px;
+}
+.issue-plate .issue-box .btn {
+  width: 197px;
+  height: 36px;
+  color: #fff;
+  background-color: #8e6cd9;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 8px;
+  margin: auto;
+  margin-top: 22px;
+  font-size: 16px;
+}
+.issue-plate .issue-box .hide {
+  transition: all 0.35s;
+  opacity: 0;
+  height: 0;
+}
+.issue-plate .show {
+  transition: all 0.6s;
+  opacity: 1;
+}
+.issue-plate .content {
+  width: 355px;
+  right: 0;
+  bottom: 44px;
+}
+.issue-plate .content .tit-input {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 13px;
+  margin-bottom: 14px;
+}
+.issue-plate .content .cont-input {
+  height: 156px;
+  padding: 11px;
+}
+.issue-plate .content .tit-input,
+.issue-plate .content .cont-input {
+  width: 100%;
+  border: 1.5px solid #8e6cd9;
+  background-color: #ded0f7;
+  color: #9e86db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.issue-plate .content .tit-input::placeholder,
+.issue-plate .content .cont-input::placeholder {
+  color: #9e86db;
+  font-size: 16px;
+}
+.issue-plate .content .cont-input {
+  resize: none;
+  outline: none;
+}
+.issue-plate .content .tit-box {
+  position: relative;
+}
+.issue-plate .content .tit-box .total {
+  position: absolute;
+  height: 16px;
+  right: 11px;
+  top: 13px;
+  font-size: 14px;
+  color: #9e86db;
+}
+.issue-plate .content .cont-box {
+  position: relative;
+}
+.issue-plate .content .cont-box .total {
+  position: absolute;
+  height: 16px;
+  font-size: 14px;
+  color: #9e86db;
+  right: 11px;
+  bottom: 13px;
+}
+.issue-plate .label {
+  max-width: 355px;
+  left: 0;
+  bottom: 26px;
+}
+.issue-plate .label .add-label {
+  transition: all 0.35s;
+  height: 24px;
+  height: 0;
+  width: 83%;
+  outline: none;
+  border: none;
+  background-color: #e6daf7;
+  border-radius: 8px;
+  color: #808080;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 10px;
+}
+.issue-plate .label .add-label::placeholder {
+  color: #808080;
+  font-size: 12px;
+  line-height: 24px;
+}
+.issue-plate .label .addTag {
+  transition: all 0.35s;
+  position: relative;
+  width: 100%;
+}
+.issue-plate .label .confirm {
+  transition: all 0.35s;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 48px;
+  height: 0;
+  background-color: #8e6cd9;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 24px;
+}
+.issue-plate .label .active {
+  transition: all 0.35s;
+  height: 24px;
+}
+.issue-plate .label .tag-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.issue-plate .label .tag-box .tag-item,
+.issue-plate .label .tag-box .add-tag {
+  flex-shrink: 0;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #ded0f7;
+  color: #8e6cd9;
+  padding: 0 20px;
+  border-radius: 196px;
+  border: 2px solid #8e6cd9;
+  font-size: 16px;
+  margin-bottom: 8px;
+  transition: all 0.35s;
+}
+.issue-plate .label .tag-box .tag-item:not(:last-child),
+.issue-plate .label .tag-box .add-tag:not(:last-child) {
+  margin-right: 10px;
+}
+.issue-plate .label .tag-box .add-tag {
+  position: relative;
+  width: 64px;
+  height: 30px;
+}
+.issue-plate .label .tag-box .add-tag::before,
+.issue-plate .label .tag-box .add-tag::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  content: '';
+  width: 2px;
+  height: 14px;
+  background-color: #8e6cd9;
+  border-radius: 50px;
+}
+.issue-plate .label .tag-box .add-tag::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.issue-plate .label .tag-box .disCli {
+  transition: all 0.35s;
+  color: #9d9aa2;
+  background-color: #e6daf7;
+  border-color: #bababa;
+}
+.issue-plate .label .second {
+  margin-top: 10px;
+}
+.issue-plate .label .continue {
+  margin-top: 10px;
+}
+.issue-plate .check-wrap {
+  display: flex;
+}
+.issue-plate .check-wrap .checkBox {
+  width: 15px;
+  height: 15px;
+  color: #8e6cd9;
+  font-size: 17px;
+}
+.issue-plate .check-wrap input {
+  margin-right: 9px;
+}
+.issue-plate .limit {
+  width: 355px;
+  top: 0;
+  left: 82px;
+}
+.issue-plate .limit .second {
+  margin-top: 18px;
+}
+.issue-plate .limit .check-wrap {
+  width: 233px;
+}
+.issue-plate .limit .checkBox {
+  width: 116px;
+}
+@keyframes boat1 {
+  0% {
+    left: 34%;
+    bottom: -3%;
+    transform: rotate(0deg);
+  }
+  40% {
+    left: 39%;
+    bottom: 4%;
+    transform: rotate(10deg);
+  }
+  80% {
+    left: 46%;
+    bottom: 9%;
+  }
+  100% {
+    left: 50%;
+    bottom: 13%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes boat2 {
+  0% {
+    left: 50%;
+    bottom: 10%;
+    transform: rotate(0);
+  }
+  40% {
+    left: 44%;
+    bottom: 22%;
+    transform: rotate(20deg);
+  }
+  80% {
+    left: 38%;
+    bottom: 27%;
+    transform: rotate(39deg);
+  }
+  100% {
+    left: 36%;
+    bottom: 32%;
+    transform: rotate(20deg);
+  }
+}
+@keyframes boat3 {
+  0% {
+    left: 35%;
+    bottom: 29%;
+    transform: rotate(20deg);
+  }
+  40% {
+    left: 41%;
+    bottom: 36%;
+    transform: rotate(39deg);
+  }
+  100% {
+    left: 50%;
+    bottom: 48%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes boat4 {
+  0% {
+    left: 50%;
+    bottom: 48%;
+  }
+  40% {
+    left: 39%;
+    bottom: 67%;
+    transform: rotate(39deg);
+  }
+  60% {
+    left: 46%;
+    bottom: 81%;
+    transform: rotate(20deg);
+  }
+  100% {
+    left: 58%;
+    bottom: 96%;
+    transform: rotate(0deg);
+  }
+}
+.issue-plate .boat {
+  position: absolute;
+  width: 12vw;
+  height: 26vh;
+  background-image: url(../images/boat.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: boat1 2s linear;
+  animation-fill-mode: forwards;
+  /*保持动画最后一个状态*/
+}
+.issue-plate .boat2 {
+  animation: boat2 2s linear;
+  animation-fill-mode: forwards;
+}
+.issue-plate .boat3 {
+  animation: boat3 2s linear;
+  animation-fill-mode: forwards;
+}
+.issue-plate .boat4 {
+  animation: boat4 2s linear;
+  animation-fill-mode: forwards;
+}

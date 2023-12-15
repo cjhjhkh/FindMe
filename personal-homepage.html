@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal-homepage</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="./javascript/personal-homepage.js"></script>
+    <script src="axios-1.5.1/axios-1.5.1/dist/axios.min.js"></script>
+
+
+    <!-- 绘本 -->
+    <script src="./javascript/personal-book.js"></script>
+    <!-- <script src="./javascript/communicat-area.js"></script> -->
+    <link rel="stylesheet" href="./css/self-evaluation.css">
+    <link rel="stylesheet" href="./css/personal-homepage.css">
+
+</head>
+
+<body>
+    <div class="homepage-contain contain">
+        <a href="./index.html">
+            <div class="preBtn"></div>
+        </a>
+
+        <div class="homepage-wrap">
+            <div class="side-cont">
+                <div class="per-head">
+                    <!-- <div class="head-pro"></div> -->
+
+                    <!-- 头像 -->
+                    <div class="head-pro">
+                        <!-- <img src="./images/avatar3.jpg"> -->
+                        <div class="add-change">
+                            <div class="add-ava"></div>
+                            <div class="text">点击修改头像</div>
+                        </div>
+                    </div>
+                    <!-- 上传头像表单 -->
+                    <form id="uploadForm" class="updataAva">
+                        <label for="avatar">请选择头像：</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*">
+                        <button type="submit">上传</button>
+                    </form>
+
+                    <div class="nick-name">我可以学</div>
+                    <div class="motto">没事，我还可以学</div>
+                </div>
+                <ul class="side-nav">
+                    <li class="sel-btn bgc cont-btn">测试报告</li>
+                    <li class="sel-btn cont-btn">我的绘本</li>
+                    <li class="sel-btn cont-btn daily-btn">我的动态</li>
+                    <li class="sel-btn cont-btn like-btn shrink">我的点赞</li>
+                    <li class="sel-btn cont-btn store-btn shrink">我的收藏</li>
+                    <li class="sel-btn cont-btn">成长星球</li>
+                </ul>
+            </div>
+            <div class="mainCont per-report show3">
+                <div class="report-top">
+                    <!-- <div class="self-awareness">
+                        <div class="edit"></div>
+                        <div class="tit">我是一个<input class="awa-input" type="text">的人</div>
+                        我擅长:
+                        <textarea class="cont-textarea"></textarea>
+                        <div class="cont-box" style="width: 0; height: 0;">
+                        </div>
+                    </div> -->
+                    <!-- <div class="test-reports"> -->
+                    <div class="report evaluation">
+                        <div class="tit">他人评价</div>
+                        <div class="cont-box">
+                            <div class="detail">执行力强</div>
+                            <div class="detail">演讲很好</div>
+                            <div class="detail">目标清晰</div>
+                            <div class="detail">让人信服</div>
+                        </div>
+
+                    </div>
+                    <div class="report">
+                        <div class="history">历史记录</div>
+                        <div class="tit">MBTI测试报告</div>
+                        <div class="report-cont">
+                            <div class="mbti-class">
+                                ENFP
+                            </div>
+                            <div class="text">特征关键词</div>
+                            <div class="tip-box">
+
+                                <div class="detail">乐观</div>
+                                <div class="detail">富有想象力</div>
+                                <div class="detail">颇具创造力</div>
+                                <div class="detail">爱玩</div>
+                                <div class="detail">外倾</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report">
+                        <div class="history">历史记录</div>
+                        <div class="tit">霍兰德测试报告</div>
+                        <div class="report-cont">
+                            <div class="mbti-class">AEC
+                            </div>
+                            <div class="text">特征关键词</div>
+                            <div class="tip-box">
+                                <div class="detail">企业型</div>
+                                <div class="detail">艺术型</div>
+                                <div class="detail">传统型</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report">
+                        <div class="history">历史记录</div>
+                        <div class="tit">DISC测试报告</div>
+                        <div class="report-cont">
+                            <div class="mbti-class">C型
+                            </div>
+                            <div class="text">特征关键词</div>
+                            <div class="tip-box">
+
+                                <div class="detail">深沉</div>
+                                <div class="detail">精准</div>
+                                <div class="detail">尽忠职守</div>
+                                <div class="detail">自制</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <div class="report-bottom">
+                    <!-- <div class="evaluation">
+                        <div class="tit">他人评价</div>
+                        <div class="cont-box">
+                            <div class="detail">执行力强</div>
+                            <div class="detail">演讲很好</div>
+                            <div class="detail">目标清晰</div>
+                            <div class="detail">让人信服</div>
+                        </div>
+
+                    </div> -->
+                    <div class="paintings-wrap">
+                        <div class="paintings">
+                            <div class="painting">
+                                <div class="tit">来自：仪姐</div>
+                                <div class="item-box">
+                                    <div class="descs">
+                                        <div class="desc">执行力强</div>
+                                        <div class="desc">演讲很好</div>
+                                        <div class="desc">女强人</div>
+                                        <div class="desc">目标清晰</div>
+                                        <div class="desc">让人信服</div>
+                                    </div>
+                                    <div class="item"></div>
+                                </div>
+                            </div>
+                            <div class="painting">
+                                <div class="tit">来自：小铭</div>
+                                <div class="item-box">
+                                    <div class="descs">
+                                        <div class="desc">温柔</div>
+                                        <div class="desc">大方</div>
+                                        <div class="desc">有目标</div>
+                                        <div class="desc">目标清晰</div>
+                                        <div class="desc">让人信服</div>
+                                    </div>
+                                    <div class="item"></div>
+                                </div>
+                            </div>
+                            <div class="painting">
+                                <div class="tit">来自：张三</div>
+                                <div class="item-box">
+                                    <div class="descs">
+                                        <div class="desc">执行力强
+                                        </div>
+                                        <div class="desc">演讲很好</div>
+                                        <div class="desc">女强人</div>
+                                        <div class="desc">目标清晰</div>
+                                        <div class="desc">让人信服</div>
+                                    </div>
+                                    <div class="item"></div>
+                                </div>
+                                <div class="track-wrap">
+                                    <div class="track1"></div>
+                                    <div class="track2"></div>
+                                </div>
+                            </div>
+                            <div class="painting">
+                                <div class="tit">仪姐</div>
+                                <div class="item-box">
+                                    <div class="descs">
+                                        <div class="desc">执行力强</div>
+                                        <div class="desc">演讲很好</div>
+                                        <div class="desc">女强人</div>
+                                        <div class="desc">目标清晰</div>
+                                        <div class="desc">让人信服</div>
+                                    </div>
+                                    <div class="item"></div>
+                                </div>
+                            </div>
+                            <div class="painting">
+                                <div class="tit">仪姐</div>
+                                <div class="item-box">
+                                    <div class="descs">
+                                        <div class="desc">执行力强</div>
+                                        <div class="desc">演讲很好</div>
+                                        <div class="desc">女强人</div>
+                                        <div class="desc">目标清晰</div>
+                                        <div class="desc">让人信服</div>
+                                    </div>
+                                    <div class="item"></div>
+                                </div>
+                            </div>
+                            <div class="painting">
+                                <div class="tit">仪姐</div>
+                                <div class="item-box">
+                                    <div class="descs">
+                                        <div class="desc">执行力强</div>
+                                        <div class="desc">演讲很好</div>
+                                        <div class="desc">女强人</div>
+                                        <div class="desc">目标清晰</div>
+                                        <div class="desc">让人信服</div>
+                                    </div>
+                                    <div class="item"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="mainCont book self-evaluation">
+
+
+                <!-- 绘本 -->
+                <!-- <div class="self-evaluation">
+                    <div class="self-evaluation-wrap">
+                        <div class="main-cont1"> -->
+                <ul class="book">
+                    <!-- <div class="tip tip1">
+                                    <div class="tip-main">
+                                        <div class="tip-text">
+                                            <div class="text-cont">我们一起玩个游戏吧，试着用文字、图画或者贴纸的方式想象“我”的样子吧！</div>
+                                            <div class="continue">点击任意位置继续</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tip tip2">
+                                    <div class="tip-main">
+                                        <div class="tip-text">
+                                            <div class="text-cont">如果是职业的话？你觉得我擅长做什么工作呢？</div>
+                                            <div class="continue">点击任意位置继续</div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                    <li class="page page1 front"></li>
+                    <li class="page page2 back">
+
+                        <div class="avatar">
+                            <img src="./images/avatar.jpg">
+                            <div class="add-change">
+                                <div class="add"></div>
+                                <div class="text">点击修改头像</div>
+                            </div>
+                        </div>
+
+
+                        <div class="self-intro">你好呀，我是<span class="input user-name">Winnie</span>。我的职业是<span
+                                class="input user-job">前端工程师</span>噢！我的生日是<span class="input year">2005</span>年<span
+                                class="input month">6</span>月<span class="input data">6</span>日。我来自<span
+                                class="input area">广东</span>。很高兴认识你，我们交个朋友吧!</div>
+                    </li>
+                    <li class="page page3 front">
+                        <div class="adv show1">
+                            <div class="adv-cont">
+                                <div class="cont">聪明</div>
+                            </div>
+                            <div class="adv-cont">
+                                <div class="cont">勇敢</div>
+                            </div>
+                            <div class="adv-cont">
+                                <div class="cont">有力气</div>
+                            </div>
+                            <div class="adv-cont">
+                                <div class="cont">有爱心</div>
+                            </div>
+                            <div class="desc-text">我有很多优点，这些都是我的优势！</div>
+                        </div>
+                        <div class="disadv">
+                            <div class="disadv-cont">
+                                <div class="cont">粗心</div>
+                            </div>
+                            <div class="disadv-cont">
+                                <div class="cont">专注力不佳</div>
+                            </div>
+                            <div class="disadv-cont">
+                                <div class="cont">不果断</div>
+                            </div>
+                            <div class="disadv-cont">
+                                <div class="cont">怕狗</div>
+                            </div>
+                            <div class="desc-text">当然我也有缺点，这是我的劣势，希望我们能好好相处！</div>
+                        </div>
+                        <div class="change-box">
+                            <div class="text">Advantage</div>
+                            <div class="change-btn">
+                                <div class="slider"></div>
+                            </div>
+                            <div class="text">Disadvantage</div>
+                        </div>
+                    </li>
+                    <li class="page page4 back">
+                        <img src="" class="nowMe">
+                        <div class="tit">现在的我是这样的...</div>
+
+                    </li>
+                    <li class="page page5 front">
+                        <img src="" class="futureMe">
+                        <div class="tit">理想的我是这样的...</div>
+                    </li>
+                    <li class="page page6 back">
+                        <div class="tit">现在的我的职业是这样的...</div>
+
+                        <div class="edit-contain">
+                            <div class="job-box">
+                                <div class="sticker-area">
+                                    <div class="tipTit">职业头像</div>
+                                    <div class="tipText">（选择贴纸拖动到此处）</div>
+                                </div>
+                                <div class="futureJob"></div>
+                                <textarea class="job-desc" cols="30" rows="10" placeholder="描述一下你对未来职业的想法吧"></textarea>
+                            </div>
+                            <div class="job-box">
+                                <div class="sticker-area">
+                                    <div class="tipTit">职业头像</div>
+                                    <div class="tipText">（选择贴纸拖动到此处）</div>
+                                </div>
+                                <div class="futureJob"></div>
+                                <textarea class="job-desc" cols="30" rows="10" placeholder="描述一下你对未来职业的想法吧"></textarea>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="page page7 front">
+                        <div class="tit">理想的我的职业是这样的...</div>
+                        <div class="edit-contain">
+                            <div class="job-box">
+                                <div class="sticker-area">
+                                    <div class="tipTit">职业头像</div>
+                                    <div class="tipText">（选择贴纸拖动到此处）</div>
+                                </div>
+                                <div class="futureJob"></div>
+                                <textarea class="job-desc" cols="30" rows="10" placeholder="描述一下你对未来职业的想法吧"></textarea>
+                            </div>
+                            <div class="job-box">
+                                <div class="sticker-area">
+                                    <div class="tipTit">职业头像</div>
+                                    <div class="tipText">（选择贴纸拖动到此处）</div>
+                                </div>
+                                <div class="futureJob"></div>
+                                <textarea class="job-desc" cols="30" rows="10" placeholder="描述一下你对未来职业的想法吧"></textarea>
+                            </div>
+                        </div>
+                        <div class="except-wrap" style="display: none;">
+                            <div class="except">
+                                <div class="text">接受</div>
+                                <div class="tag-mark">√</div>
+                            </div>
+                        </div>
+                        <div class="reject-wrap" style="display: none;">
+                            <div class="reject">
+                                <div class="text">拒绝</div>
+                                <div class="tag-mark">×</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page page8 back">
+
+                        <div class="sum"></div>
+                        <div class="sum"></div>
+                        <div class="sum"></div>
+                    </li>
+                </ul>
+                <!-- </div>
+                    </div> -->
+                <!-- </div> -->
+
+
+
+
+            </div>
+            <div class="mainCont daily">
+                <ul class="daily-life">
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">11.18</div>
+                            <div class="moment">16:00</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">如何了解自己？</div>
+                                <div class="cont">了解自己是一个持续的过程，需要不断地反思和探索。以下是一些方法可以帮助了解自己：
+                                    反思：花时间思考自己的价值观、信仰、兴趣爱好和目标。问自己一些问题，比如“我最看重的是什么？”、“我希望在生活中取得什么成就？”等等。
+                                    自我观察：观察自己的行为、情绪和反应。注意自己在不同情境下的表现，以及对不同人和事物的态度。
+                                    接受反馈：向身边的朋友、家人或同事寻求他们对你的看法和建议。他们的反馈可以帮助你更好地了解自己。
+                                    学习：通过阅读书籍、参加课程或咨询专业人士，了解有关个人发展、心理学和人际关系的知识，从中找到对自己有帮助的信息。
+                                    探索：尝试新的事物和体验，比如旅行、参加社交活动、尝试新的爱好等。这些经历可以帮助你发现自己的兴趣和能力。
+                                    通过以上方法，你可以逐渐了解自己的内心世界和外在表现，从而更好地认识自己并做出更明智的决策。</div>
+                            </div>
+                            <!-- <div class="opera"> -->
+                            <!-- <div class="like"></div> -->
+                            <!-- <div class="comment"></div> -->
+                            <!-- </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">11.11</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">ENFP的人都有什么共性？</div>
+                                <div class="cont">ENFP是Myers-Briggs Type
+                                    Indicator（MBTI）中的一种人格类型，代表外向、直觉、情感和感知。ENFP的人通常具有以下共性：
+                                    外向和社交：他们喜欢与他人交往，善于建立和维护人际关系。他们通常充满活力，喜欢参加社交活动和团队合作。
+                                    充满创意和想象力：ENFP的人通常富有创造力，喜欢探索新思想和概念。他们可能在艺术、写作、音乐或其他创意领域有出色的表现。
+                                    对未来充满期待：他们倾向于看到事物的积极面，对未来充满信心和希望。他们通常具有积极的态度，能够激励和鼓舞他人。
+                                    灵活和适应性强：ENFP的人通常能够很好地适应不同的情况和环境，他们善于处理变化和挑战。
+                                    富有同情心：他们通常对他人的感受和情感非常敏感，乐于帮助他人，关心社会问题和社会正义。
+                                    需要说明的是，MBTI只是一种人格类型理论，每个人都是独一无二的，ENFP的人也会有各自的个性特点和差异。</div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">了解自己的五大方法</div>
+                                <div class="cont">自我反思：通过深入思考和反省自己的行为、情感和动机，来了解自己的内心世界和行为模式。
+                                    自我观察：通过观察自己的行为、情绪和思维方式，来了解自己的习惯和特点。
+                                    心理测试：通过参加心理测试，例如性格测试、情绪智商测试等，来了解自己的性格特点和心理特征。
+                                    反馈：向身边的朋友、家人或同事寻求反馈，了解他们对你的印象和评价，从而了解自己在别人眼中的形象和表现。
+                                    咨询专家：寻求心理咨询师或职业规划师的帮助，通过专业的咨询和辅导，了解自己的潜能、兴趣和适合的职业方向。</div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">马斯洛需求理论是什么</div>
+                                <div class="cont">是由美国心理学家Abraham
+                                    Maslow在20世纪50年代提出的一种心理学理论。该理论认为人类的需求可以被分为不同的层次，按照优先级依次排列，人们会按照这个层次逐步满足自己的需求。
+                                    马斯洛的需求层次理论包括以下五个层次：
+                                    生理需求：包括食物、水、睡眠、性等基本的生存需求。
+                                    安全需求：包括对身体的安全、健康、财务安全、居住安全等的需求。
+                                    社交需求：包括对友谊、家庭、爱情关系的需求，以及对社会群体的归属感。
+                                    尊重需求：包括对自尊、尊重、地位、成就感的需求。
+                                    自我实现需求：包括对个人潜力的实现、自我发展、追求个人目标和意义的需求。
+                                    根据这个理论，人们会先满足基本的生理需求和安全需求，然后才会追求更高层次的社交需求、尊重需求和自我实现需求。这个理论对于理解人类行为和动机有着重要的启发意义，也被广泛应用于管理和领导学科中。
+                                </div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">今天又是美好的一天！</div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                </ul>
+                <div class="daily-tools">
+                    <div class="tool-like"></div>
+                    <div class="tool-store"></div>
+                    <div class="tool-comment"></div>
+                </div>
+
+                <!-- <div class="add"></div> -->
+            </div>
+            <div class="mainCont like">
+                <ul class="daily-life">
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">11.18</div>
+                            <div class="moment">16:00</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">如何了解自己？</div>
+                                <div class="cont">了解自己是一个持续的过程，需要不断地反思和探索。以下是一些方法可以帮助了解自己：
+                                    反思：花时间思考自己的价值观、信仰、兴趣爱好和目标。问自己一些问题，比如“我最看重的是什么？”、“我希望在生活中取得什么成就？”等等。
+                                    自我观察：观察自己的行为、情绪和反应。注意自己在不同情境下的表现，以及对不同人和事物的态度。
+                                    接受反馈：向身边的朋友、家人或同事寻求他们对你的看法和建议。他们的反馈可以帮助你更好地了解自己。
+                                    学习：通过阅读书籍、参加课程或咨询专业人士，了解有关个人发展、心理学和人际关系的知识，从中找到对自己有帮助的信息。
+                                    探索：尝试新的事物和体验，比如旅行、参加社交活动、尝试新的爱好等。这些经历可以帮助你发现自己的兴趣和能力。
+                                    通过以上方法，你可以逐渐了解自己的内心世界和外在表现，从而更好地认识自己并做出更明智的决策。</div>
+                            </div>
+                            <!-- <div class="opera"> -->
+                            <!-- <div class="like"></div> -->
+                            <!-- <div class="comment"></div> -->
+                            <!-- </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">11.11</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">ENFP的人都有什么共性？</div>
+                                <div class="cont">ENFP是Myers-Briggs Type
+                                    Indicator（MBTI）中的一种人格类型，代表外向、直觉、情感和感知。ENFP的人通常具有以下共性：
+                                    外向和社交：他们喜欢与他人交往，善于建立和维护人际关系。他们通常充满活力，喜欢参加社交活动和团队合作。
+                                    充满创意和想象力：ENFP的人通常富有创造力，喜欢探索新思想和概念。他们可能在艺术、写作、音乐或其他创意领域有出色的表现。
+                                    对未来充满期待：他们倾向于看到事物的积极面，对未来充满信心和希望。他们通常具有积极的态度，能够激励和鼓舞他人。
+                                    灵活和适应性强：ENFP的人通常能够很好地适应不同的情况和环境，他们善于处理变化和挑战。
+                                    富有同情心：他们通常对他人的感受和情感非常敏感，乐于帮助他人，关心社会问题和社会正义。
+                                    需要说明的是，MBTI只是一种人格类型理论，每个人都是独一无二的，ENFP的人也会有各自的个性特点和差异。</div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">了解自己的五大方法</div>
+                                <div class="cont">自我反思：通过深入思考和反省自己的行为、情感和动机，来了解自己的内心世界和行为模式。
+                                    自我观察：通过观察自己的行为、情绪和思维方式，来了解自己的习惯和特点。
+                                    心理测试：通过参加心理测试，例如性格测试、情绪智商测试等，来了解自己的性格特点和心理特征。
+                                    反馈：向身边的朋友、家人或同事寻求反馈，了解他们对你的印象和评价，从而了解自己在别人眼中的形象和表现。
+                                    咨询专家：寻求心理咨询师或职业规划师的帮助，通过专业的咨询和辅导，了解自己的潜能、兴趣和适合的职业方向。</div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">马斯洛需求理论是什么</div>
+                                <div class="cont">是由美国心理学家Abraham
+                                    Maslow在20世纪50年代提出的一种心理学理论。该理论认为人类的需求可以被分为不同的层次，按照优先级依次排列，人们会按照这个层次逐步满足自己的需求。
+                                    马斯洛的需求层次理论包括以下五个层次：
+                                    生理需求：包括食物、水、睡眠、性等基本的生存需求。
+                                    安全需求：包括对身体的安全、健康、财务安全、居住安全等的需求。
+                                    社交需求：包括对友谊、家庭、爱情关系的需求，以及对社会群体的归属感。
+                                    尊重需求：包括对自尊、尊重、地位、成就感的需求。
+                                    自我实现需求：包括对个人潜力的实现、自我发展、追求个人目标和意义的需求。
+                                    根据这个理论，人们会先满足基本的生理需求和安全需求，然后才会追求更高层次的社交需求、尊重需求和自我实现需求。这个理论对于理解人类行为和动机有着重要的启发意义，也被广泛应用于管理和领导学科中。
+                                </div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                </ul>
+                <div class="daily-tools">
+                    <div class="tool-like"></div>
+                    <div class="tool-store"></div>
+                    <div class="tool-comment"></div>
+                </div>
+                <!-- <div class="add"></div> -->
+            </div>
+            <div class="mainCont store">
+
+                <ul class="daily-life">
+
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">了解自己的五大方法</div>
+                                <div class="cont">自我反思：通过深入思考和反省自己的行为、情感和动机，来了解自己的内心世界和行为模式。
+                                    自我观察：通过观察自己的行为、情绪和思维方式，来了解自己的习惯和特点。
+                                    心理测试：通过参加心理测试，例如性格测试、情绪智商测试等，来了解自己的性格特点和心理特征。
+                                    反馈：向身边的朋友、家人或同事寻求反馈，了解他们对你的印象和评价，从而了解自己在别人眼中的形象和表现。
+                                    咨询专家：寻求心理咨询师或职业规划师的帮助，通过专业的咨询和辅导，了解自己的潜能、兴趣和适合的职业方向。</div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">马斯洛需求理论是什么</div>
+                                <div class="cont">是由美国心理学家Abraham
+                                    Maslow在20世纪50年代提出的一种心理学理论。该理论认为人类的需求可以被分为不同的层次，按照优先级依次排列，人们会按照这个层次逐步满足自己的需求。
+                                    马斯洛的需求层次理论包括以下五个层次：
+                                    生理需求：包括食物、水、睡眠、性等基本的生存需求。
+                                    安全需求：包括对身体的安全、健康、财务安全、居住安全等的需求。
+                                    社交需求：包括对友谊、家庭、爱情关系的需求，以及对社会群体的归属感。
+                                    尊重需求：包括对自尊、尊重、地位、成就感的需求。
+                                    自我实现需求：包括对个人潜力的实现、自我发展、追求个人目标和意义的需求。
+                                    根据这个理论，人们会先满足基本的生理需求和安全需求，然后才会追求更高层次的社交需求、尊重需求和自我实现需求。这个理论对于理解人类行为和动机有着重要的启发意义，也被广泛应用于管理和领导学科中。
+                                </div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">11.18</div>
+                            <div class="moment">16:00</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">如何了解自己？</div>
+                                <div class="cont">了解自己是一个持续的过程，需要不断地反思和探索。以下是一些方法可以帮助了解自己：
+                                    反思：花时间思考自己的价值观、信仰、兴趣爱好和目标。问自己一些问题，比如“我最看重的是什么？”、“我希望在生活中取得什么成就？”等等。
+                                    自我观察：观察自己的行为、情绪和反应。注意自己在不同情境下的表现，以及对不同人和事物的态度。
+                                    接受反馈：向身边的朋友、家人或同事寻求他们对你的看法和建议。他们的反馈可以帮助你更好地了解自己。
+                                    学习：通过阅读书籍、参加课程或咨询专业人士，了解有关个人发展、心理学和人际关系的知识，从中找到对自己有帮助的信息。
+                                    探索：尝试新的事物和体验，比如旅行、参加社交活动、尝试新的爱好等。这些经历可以帮助你发现自己的兴趣和能力。
+                                    通过以上方法，你可以逐渐了解自己的内心世界和外在表现，从而更好地认识自己并做出更明智的决策。</div>
+                            </div>
+                            <!-- <div class="opera"> -->
+                            <!-- <div class="like"></div> -->
+                            <!-- <div class="comment"></div> -->
+                            <!-- </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">11.18</div>
+                            <div class="moment">16:00</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">如何了解自己？</div>
+                                <div class="cont">了解自己是一个持续的过程，需要不断地反思和探索。以下是一些方法可以帮助了解自己：
+                                    反思：花时间思考自己的价值观、信仰、兴趣爱好和目标。问自己一些问题，比如“我最看重的是什么？”、“我希望在生活中取得什么成就？”等等。
+                                    自我观察：观察自己的行为、情绪和反应。注意自己在不同情境下的表现，以及对不同人和事物的态度。
+                                    接受反馈：向身边的朋友、家人或同事寻求他们对你的看法和建议。他们的反馈可以帮助你更好地了解自己。
+                                    学习：通过阅读书籍、参加课程或咨询专业人士，了解有关个人发展、心理学和人际关系的知识，从中找到对自己有帮助的信息。
+                                    探索：尝试新的事物和体验，比如旅行、参加社交活动、尝试新的爱好等。这些经历可以帮助你发现自己的兴趣和能力。
+                                    通过以上方法，你可以逐渐了解自己的内心世界和外在表现，从而更好地认识自己并做出更明智的决策。</div>
+                            </div>
+                            <!-- <div class="opera"> -->
+                            <!-- <div class="like"></div> -->
+                            <!-- <div class="comment"></div> -->
+                            <!-- </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">11.11</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">ENFP的人都有什么共性？</div>
+                                <div class="cont">ENFP是Myers-Briggs Type
+                                    Indicator（MBTI）中的一种人格类型，代表外向、直觉、情感和感知。ENFP的人通常具有以下共性：
+                                    外向和社交：他们喜欢与他人交往，善于建立和维护人际关系。他们通常充满活力，喜欢参加社交活动和团队合作。
+                                    充满创意和想象力：ENFP的人通常富有创造力，喜欢探索新思想和概念。他们可能在艺术、写作、音乐或其他创意领域有出色的表现。
+                                    对未来充满期待：他们倾向于看到事物的积极面，对未来充满信心和希望。他们通常具有积极的态度，能够激励和鼓舞他人。
+                                    灵活和适应性强：ENFP的人通常能够很好地适应不同的情况和环境，他们善于处理变化和挑战。
+                                    富有同情心：他们通常对他人的感受和情感非常敏感，乐于帮助他人，关心社会问题和社会正义。
+                                    需要说明的是，MBTI只是一种人格类型理论，每个人都是独一无二的，ENFP的人也会有各自的个性特点和差异。</div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">11.11</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">ENFP的人都有什么共性？</div>
+                                <div class="cont">ENFP是Myers-Briggs Type
+                                    Indicator（MBTI）中的一种人格类型，代表外向、直觉、情感和感知。ENFP的人通常具有以下共性：
+                                    外向和社交：他们喜欢与他人交往，善于建立和维护人际关系。他们通常充满活力，喜欢参加社交活动和团队合作。
+                                    充满创意和想象力：ENFP的人通常富有创造力，喜欢探索新思想和概念。他们可能在艺术、写作、音乐或其他创意领域有出色的表现。
+                                    对未来充满期待：他们倾向于看到事物的积极面，对未来充满信心和希望。他们通常具有积极的态度，能够激励和鼓舞他人。
+                                    灵活和适应性强：ENFP的人通常能够很好地适应不同的情况和环境，他们善于处理变化和挑战。
+                                    富有同情心：他们通常对他人的感受和情感非常敏感，乐于帮助他人，关心社会问题和社会正义。
+                                    需要说明的是，MBTI只是一种人格类型理论，每个人都是独一无二的，ENFP的人也会有各自的个性特点和差异。</div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">了解自己的五大方法</div>
+                                <div class="cont">自我反思：通过深入思考和反省自己的行为、情感和动机，来了解自己的内心世界和行为模式。
+                                    自我观察：通过观察自己的行为、情绪和思维方式，来了解自己的习惯和特点。
+                                    心理测试：通过参加心理测试，例如性格测试、情绪智商测试等，来了解自己的性格特点和心理特征。
+                                    反馈：向身边的朋友、家人或同事寻求反馈，了解他们对你的印象和评价，从而了解自己在别人眼中的形象和表现。
+                                    咨询专家：寻求心理咨询师或职业规划师的帮助，通过专业的咨询和辅导，了解自己的潜能、兴趣和适合的职业方向。</div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">
+                                <div class="tit">马斯洛需求理论是什么</div>
+                                <div class="cont">是由美国心理学家Abraham
+                                    Maslow在20世纪50年代提出的一种心理学理论。该理论认为人类的需求可以被分为不同的层次，按照优先级依次排列，人们会按照这个层次逐步满足自己的需求。
+                                    马斯洛的需求层次理论包括以下五个层次：
+                                    生理需求：包括食物、水、睡眠、性等基本的生存需求。
+                                    安全需求：包括对身体的安全、健康、财务安全、居住安全等的需求。
+                                    社交需求：包括对友谊、家庭、爱情关系的需求，以及对社会群体的归属感。
+                                    尊重需求：包括对自尊、尊重、地位、成就感的需求。
+                                    自我实现需求：包括对个人潜力的实现、自我发展、追求个人目标和意义的需求。
+                                    根据这个理论，人们会先满足基本的生理需求和安全需求，然后才会追求更高层次的社交需求、尊重需求和自我实现需求。这个理论对于理解人类行为和动机有着重要的启发意义，也被广泛应用于管理和领导学科中。
+                                </div>
+                            </div>
+                            <!-- <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div> -->
+                        </div>
+                    </li>
+                </ul>
+                <div class="daily-tools">
+                    <div class="tool-like"></div>
+                    <div class="tool-store"></div>
+                    <div class="tool-comment"></div>
+                </div>
+                <!-- <div class="add"></div> -->
+            </div>
+            <!-- <div class="mainCont like">
+                <ul class="daily-life">
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">今天又是美好的一天！</div>
+                            <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">今天又是美好的一天！</div>
+                            <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">今天又是美好的一天！</div>
+                            <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">今天又是美好的一天！</div>
+                            <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="detail">
+                        <div class="time">
+                            <div class="year">2023</div>
+                            <div class="data">10.01</div>
+                            <div class="moment">10:55</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="text">今天又是美好的一天！</div>
+                            <div class="opera">
+                                <div class="like"></div>
+                                <div class="comment"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="add"></div>
+            </div> -->
+            <div class="mainCont grow-planet">
+                <div class="planet-wrap">
+                    <div class="planet"></div>
+                    <div class="man"></div>
+                </div>
+                <div class="daily-tools">
+                    <div class="tool-like"></div>
+                    <div class="tool-store"></div>
+                    <div class="tool-comment"></div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

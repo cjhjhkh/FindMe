@@ -1,0 +1,372 @@
+//out:../css/
+
+.self-exploration {
+    background-image: url(../images/test-intro-bgi.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.self-exploration-wrap {
+    display: flex;
+    align-items: center;
+    width: 1124px;
+    height: 100%;
+    margin: auto;
+}
+
+.self-exploration-cont {
+    width: 100%;
+
+}
+
+.title {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.explorations {
+    display: flex;
+    justify-content: space-between;
+    // width: 100%;
+    width: 100%;
+    height: 403px;
+
+    .exp {
+        transition: all .35s;
+        position: relative;
+        width: 266px;
+        height: 100%;
+        padding: 20px 21px 0 21px;
+        border-radius: 18px;
+        box-shadow: 0px 4px 19px 0 #ffffff;
+
+        &:hover {
+            transition: all .35s;
+            transform: scale(1.02);
+        }
+    }
+
+    /*四个板块出现动画*/
+    @keyframes move1 {
+        0% {
+            transform: translate(3300px, 52px);
+        }
+
+        100% {
+            transform: translate(0px);
+        }
+    }
+
+    @keyframes move2 {
+        0% {
+            transform: translate(3000px, 52px);
+        }
+
+        25% {
+            transform: translate(1200px, 52px);
+        }
+
+        100% {
+            transform: translate(0px);
+        }
+    }
+
+    @keyframes move3 {
+        0% {
+            transform: translate(2800px, 52px);
+        }
+
+        50% {
+            transform: translate(1000px, 52px);
+        }
+
+        100% {
+            transform: translate(0px);
+        }
+    }
+
+    @keyframes move4 {
+        0% {
+            transform: translate(2600px, 52px);
+        }
+
+        75% {
+            transform: translate(800px, 52px);
+        }
+
+        100% {
+            transform: translate(0px);
+        }
+    }
+
+    /*文字出现动画*/
+    @keyframes show-text {
+        0% {
+            opacity: 0;
+            transform: translateX(-90px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    /*图片、按钮出现动画*/
+    @keyframes show-pic {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    .exp-bgi {
+        opacity: 0;
+        width: 224px;
+        height: 226px;
+        border-radius: 18px;
+        animation: show-pic 2.8s;
+        animation-fill-mode: forwards;
+        /*动画结束后保持最后的状态*/
+    }
+
+    .tit {
+        height: 47.5px;
+        color: #fff;
+        font-size: 24px;
+        line-height: 47.5px;
+    }
+
+    .desc {
+        width: 100%;
+        height: 61px;
+        font-size: 14px;
+        line-height: 19.22px;
+    }
+
+    .enter-btn {
+        opacity: 0;
+        position: absolute;
+        right: 21px;
+        width: 67px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        animation: show-pic 2s;
+        animation-fill-mode: forwards;
+        /*动画结束后保持最后的状态*/
+    }
+
+    .job,
+    .others {
+        background-image: linear-gradient(to top left, rgba(146, 116, 220, 1), rgba(226, 204, 255, 1));
+        border: 1px solid rgba(255, 255, 255, .6);
+
+        .tit,
+        .desc {
+            color: #fff;
+        }
+
+        .enter-btn {
+            color: rgba(142, 108, 217, 1);
+            background-color: #fff;
+        }
+    }
+
+    .self,
+    .value {
+        background-color: #fff;
+
+        .tit,
+        .desc {
+            color: rgba(142, 108, 217, 1);
+        }
+
+        .enter-btn {
+            color: #fff;
+            background-color: rgba(142, 108, 217, 1);
+        }
+
+    }
+
+
+    .text-wrap {
+        /*文字部分应用动画*/
+        opacity: 0;
+        animation: show-text 1s ease-out;
+        animation-fill-mode: forwards;
+        /*动画结束后保持最后的状态*/
+    }
+
+    .job {
+        animation: move1 .9s ease-out;
+
+        .text-wrap {
+            animation-delay: 1.5s;
+            /*动画延迟*/
+        }
+
+        .exp-bgi {
+            animation-delay: 2.35s;
+            background-image: url(../images/exploration1.png);
+        }
+
+        .enter-btn {
+            animation-delay: 3.3s;
+        }
+    }
+
+    .self {
+        animation: move2 1.25s ease-out;
+
+        .text-wrap {
+            animation-delay: 1.85s;
+            /*动画延迟*/
+        }
+
+        .exp-bgi {
+            background-image: url(../images/exploration2.png);
+            animation-delay: 2.7s;
+        }
+
+        .enter-btn {
+            animation-delay: 3.85s;
+        }
+    }
+
+    .others {
+        animation: move3 1.5s ease-out;
+
+        .text-wrap {
+            animation-delay: 2.2s;
+            /*动画延迟*/
+        }
+
+        .exp-bgi {
+            background-image: url(../images/exploration3.png);
+            animation-delay: 3.05s;
+        }
+
+        .enter-btn {
+            animation-delay: 4.15s;
+        }
+    }
+
+    .value {
+        animation: move4 1.58s ease-out;
+
+        .text-wrap {
+            animation-delay: 2.35s;
+            /*动画延迟*/
+        }
+
+        .exp-bgi {
+            background-image: url(../images/exploration4.png);
+            animation-delay: 3.4s;
+        }
+
+        .enter-btn {
+            animation-delay: 4.5s;
+        }
+    }
+
+
+
+
+    /*按钮动画*/
+    .enter-btn {
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .enter-btn:active {
+        transform: scale(0.96);
+    }
+
+    .enter-btn:before,
+    .enter-btn:after {
+        position: absolute;
+        content: "";
+        width: 150%;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+        z-index: -1000;
+        background-repeat: no-repeat;
+    }
+
+    .enter-btn:hover:before {
+        top: -70%;
+        background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+            10% 10%, 18% 18%;
+        background-position: 50% 120%;
+        animation: greentopBubbles 0.6s ease;
+    }
+
+    @keyframes greentopBubbles {
+        0% {
+            background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+                40% 90%, 55% 90%, 70% 90%;
+        }
+
+        50% {
+            background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+                50% 50%, 65% 20%, 90% 30%;
+        }
+
+        100% {
+            background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+                50% 40%, 65% 10%, 90% 20%;
+            background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        }
+    }
+
+    .enter-btn:hover::after {
+        bottom: -70%;
+        background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+            radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+        background-position: 50% 0%;
+        animation: greenbottomBubbles 0.6s ease;
+    }
+
+    @keyframes greenbottomBubbles {
+        0% {
+            background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+                70% -10%, 70% 0%;
+        }
+
+        50% {
+            background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+                105% 0%;
+        }
+
+        100% {
+            background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+                110% 10%;
+            background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        }
+    }
+}

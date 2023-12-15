@@ -1,0 +1,265 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+/*返回按钮*/
+.preBtn {
+  position: fixed;
+  left: 27px;
+  top: 27px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/pre-btn\ \(1\).png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  background-size: 70%;
+  background-position: center;
+  background-color: #eddfff;
+  transition: all 0.2s;
+}
+.preBtn:hover {
+  background-color: #ddc8f8;
+}
+.test2-report {
+  width: 100vw;
+  height: 100Vh;
+  background-image: url(../images/test-bgi.png);
+  background-size: 100% 100%;
+  overflow: hidden;
+  /*切换按钮*/
+  /*雷达图*/
+  /*卡片*/
+  /*前后卡片层级*/
+}
+.test2-report .report-wrap {
+  position: relative;
+  width: 520px;
+  height: 550px;
+  margin: auto;
+  padding-top: 30px;
+  perspective: 700px;
+}
+.test2-report .switch-btn {
+  position: absolute;
+  right: -178px;
+  top: 518px;
+  width: 45px;
+  height: 45px;
+  background-color: #a28df7;
+  border-radius: 50px;
+  box-shadow: 1px 4px 7px rgba(0, 0, 0, 0.25);
+}
+.test2-report .switch-btn:hover {
+  background-color: rgba(162, 141, 247, 0.95);
+}
+.test2-report .switch-btn::before {
+  position: absolute;
+  left: 15.5px;
+  top: 13px;
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transition: all 0.35s;
+  transform: rotate(45deg);
+}
+.test2-report .btn-rotate::before {
+  transition: all 0.35s;
+  transform: rotate(-135deg);
+  top: 19px;
+}
+.test2-report .value-box {
+  display: flex;
+  justify-content: space-between;
+  width: 259px;
+  height: 90px;
+  margin: auto;
+}
+.test2-report .value .item {
+  font-size: 72px;
+  font-weight: 700;
+}
+.test2-report .value .desc,
+.test2-report .value .job-desc {
+  font-size: 18px;
+}
+.test2-report .value:nth-child(1) .item {
+  color: #a28df7;
+}
+.test2-report .value:nth-child(2) .item {
+  color: #fff8b8;
+}
+.test2-report .value:nth-child(3) .item {
+  color: #f5abde;
+}
+.test2-report .desc-text {
+  visibility: hidden;
+  font-size: 20px;
+  color: #fff;
+  line-height: 70px;
+}
+.test2-report .value,
+.test2-report desc,
+.test2-report .job-desc {
+  text-align: center;
+}
+.test2-report .radar-map {
+  width: 381px;
+  height: 369px;
+  background-color: #fff;
+  border-radius: 24px;
+  margin: auto;
+  transition: all 0.3s;
+}
+.test2-report .radar-map canvas {
+  position: absolute;
+  left: 50% !important;
+  top: 50% !important;
+  width: 309px !important;
+  height: 308px !important;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 0px;
+  margin: 0px;
+  border-width: 0px;
+  transform: translate(-50%, -50%);
+}
+.test2-report .shrink {
+  transition: all 0.3s;
+  transform: scale(0);
+}
+.test2-report .cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  transform: translateY(0);
+}
+.test2-report .scroll-to-top {
+  transform: translateY(-109%);
+}
+.test2-report .value-wrap {
+  position: absolute;
+  top: 232px;
+  width: 218px;
+  height: 262px;
+  border-radius: 24px;
+  transition: all 1s;
+  perspective: 700px;
+}
+.test2-report .value-wrap:hover {
+  transition: all 1s;
+  transform: rotateY(180deg);
+}
+.test2-report .value-wrap:hover .value-desc {
+  transition: all 1s;
+  z-index: 1;
+}
+.test2-report .value-wrap:hover .ralate {
+  transition: all 1s;
+  z-index: 2;
+}
+.test2-report .value-wrap1,
+.test2-report .ralate-wrap1 {
+  left: -98px;
+}
+.test2-report .value-wrap2,
+.test2-report .ralate-wrap2 {
+  left: 150px;
+}
+.test2-report .value-wrap3,
+.test2-report .ralate-wrap3 {
+  left: 398px;
+}
+.test2-report .value-desc,
+.test2-report .ralate {
+  width: 218px;
+  height: 262px;
+  border-radius: 24px;
+}
+.test2-report .value-desc1,
+.test2-report .ralate1 {
+  background-image: linear-gradient(to top left, #baa8e6, #ccc0fc);
+}
+.test2-report .value-desc2,
+.test2-report .ralate2 {
+  background-image: linear-gradient(to top left, #e0dbaf, #fffbdb);
+}
+.test2-report .value-desc3,
+.test2-report .ralate3 {
+  background-image: linear-gradient(to top left, #dbb4cf, #fcdcf2);
+}
+.test2-report .relate {
+  width: 200px;
+  height: 200px;
+  background-color: silver;
+}
+.test2-report .watermark {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 262px;
+  font-size: 128px;
+  line-height: 180px;
+  text-align: center;
+}
+.test2-report .desc,
+.test2-report .job-desc {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #896DF8;
+  font-weight: 600;
+}
+.test2-report .cont {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  width: 176px;
+  height: 181px;
+  font-size: 12px;
+  line-height: 24px;
+  color: #616161;
+  /*超出省略号*/
+  height: 165px;
+  overflow: hidden;
+}
+.test2-report .value-desc1,
+.test2-report .ralate1,
+.test2-report .value-desc2,
+.test2-report .ralate2,
+.test2-report .value-desc3,
+.test2-report .ralate3 {
+  position: absolute;
+  top: 0;
+  padding-top: 38px;
+  box-shadow: 1px 4px 7px rgba(0, 0, 0, 0.25);
+}
+.test2-report .value-desc2,
+.test2-report .value-desc3,
+.test2-report .value-desc1 {
+  z-index: 2;
+}
+.test2-report .ralate2,
+.test2-report .ralate1,
+.test2-report .ralate3 {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+.test2-report .value-desc1,
+.test2-report .ralate1 {
+  color: rgba(162, 141, 247, 0.6);
+}
+.test2-report .value-desc2,
+.test2-report .ralate2 {
+  color: rgba(255, 248, 184, 0.6);
+}
+.test2-report .value-desc3,
+.test2-report .ralate3 {
+  color: rgba(245, 171, 222, 0.6);
+}
